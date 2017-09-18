@@ -68,6 +68,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        // NOTICE - W.I.P.
+        
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let viewController = storyboard.instantiateViewController(withIdentifier: "tutorial") as! UINavigationController
+//        self.window?.rootViewController = viewController
+//        self.window?.makeKeyAndVisible()
+        
         return true
     }
     

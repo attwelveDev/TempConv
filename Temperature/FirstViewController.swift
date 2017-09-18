@@ -129,13 +129,13 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
     @IBOutlet var tempRange: TemperatureRange!
     @IBOutlet weak var tempPicker: UIPickerView!
     @IBOutlet weak var tempLabel: UILabel!
-    @IBAction func helpBTN(_ sender: AnyObject) {
-        
-        let vcName = identity
-        let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
-        self.navigationController?.pushViewController(viewController!, animated: true)
-        
-    }
+//    @IBAction func helpBTN(_ sender: AnyObject) {
+//        
+//        let vcName = identity
+//        let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+//        self.navigationController?.pushViewController(viewController!, animated: true)
+//        
+//    }
     
     @IBAction func reverse(_ sender: Any) {
         animateOut()
@@ -172,14 +172,42 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
         
     }
     
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        
+//        view.transform = CGAffineTransform(rotationAngle: (90 * (.pi / 180)))
+        
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        label.text = "\(tempRange.values[row])°C"
+        label.textColor = UIColor.white
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 25)
+        view.addSubview(label)
+        
+        return view
+    }
+//    
+//    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+//        return 100
+//    }
+//    
+//    var rotationAngle: CGFloat!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Celsius to Fahrenheit"
-        navigationController?.navigationBar.barTintColor = UIColor(red:0.00, green:0.42, blue:0.98, alpha:1.0)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationItem.title = "C° to F°"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 25), NSForegroundColorAttributeName: UIColor.white]
         
-        tempLabel.layer.cornerRadius = 5.0
+//        navigationController?.navigationBar.barTintColor = UIColor(red:0.00, green:0.42, blue:0.98, alpha:1.0)
+        
+//        rotationAngle = -90 * (.pi/180)
+//        
+//        let y = tempPicker.frame.origin.y
+//        tempPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
+//        tempPicker.frame = CGRect(x: -100, y: y, width: view.frame.width + 200, height: 100)
+        
+        tempLabel.layer.cornerRadius = tempLabel.frame.height / 2
         tempLabel.clipsToBounds = true
         
         effect = visualEffectView?.effect
@@ -204,6 +232,11 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        tempPicker.subviews[1].isHidden = true
+        tempPicker.subviews[2].isHidden = true
     }
     
     var delegate: SideBarDelegate?
