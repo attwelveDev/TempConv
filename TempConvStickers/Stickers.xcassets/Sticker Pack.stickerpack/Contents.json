@@ -1,0 +1,35 @@
+{
+  "stickers" : [
+    {
+      "filename" : "+1000_sticker.sticker"
+    },
+    {
+      "filename" : "+1800_sticker.sticker"
+    },
+    {
+      "filename" : "soHot_sticker.sticker"
+    },
+    {
+      "filename" : "-273_sticker.sticker"
+    },
+    {
+      "filename" : "-523_sticker.sticker"
+    },
+    {
+      "filename" : "soCold_sticker.sticker"
+    },
+    {
+      "filename" : "its0K_sticker.sticker"
+    },
+    {
+      "filename" : "imJustChilli_sticker.sticker"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "properties" : {
+    "grid-size" : "regular"
+  }
+}
