@@ -1688,25 +1688,6 @@ Build 8</string>
             </objects>
             <point key="canvasLocation" x="1710" y="817"/>
         </scene>
-        <!--Page Control Page View Controller-->
-        <scene sceneID="3kQ-KB-Tio">
-            <objects>
-                <pageViewController storyboardIdentifier="tutorial2" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Cxh-CJ-SR2" customClass="PageControlPageViewController" customModule="Temperature" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems>
-                        <barButtonItem image="sidebar_icon" id="iY8-MU-BEk">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="openSideBar:" destination="BYZ-38-t0r" id="6uZ-hT-nx2"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" id="NQb-hY-lKr"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="16d-MJ-RnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1871" y="-76"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="y3B-pB-S39">
             <objects>
@@ -2343,24 +2324,6 @@ Enjoy using TempConv!</string>
                 </view>
             </objects>
             <point key="canvasLocation" x="3090" y="-927"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="KAd-2j-HuO">
-            <objects>
-                <navigationController storyboardIdentifier="tutorial" automaticallyAdjustsScrollViewInsets="NO" id="PHW-X8-exh" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dSj-Ky-57W">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Cxh-CJ-SR2" kind="relationship" relationship="rootViewController" id="Nl8-Zg-j4r"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bgN-aS-0Zu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1871" y="-927"/>
         </scene>
     </scenes>
     <resources>

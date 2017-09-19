@@ -49,7 +49,6 @@
 		04A5A3DB1E1F2082000BE689 /* DeveloperTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5A3DA1E1F2082000BE689 /* DeveloperTableViewController.swift */; };
 		04AB04621DA5047B005BE468 /* ActualAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB04611DA5047B005BE468 /* ActualAboutViewController.swift */; };
 		04DED7311DA20C100058463E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049040001D99FBF100D5A1FC /* Assets.xcassets */; };
-		934127151F70008800D9A4AB /* PageControlPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934127141F70008800D9A4AB /* PageControlPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,7 +158,6 @@
 		049D8C0F1D9E2A81004CC057 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutViewController.swift; path = ../AboutViewController.swift; sourceTree = "<group>"; };
 		04A5A3DA1E1F2082000BE689 /* DeveloperTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperTableViewController.swift; sourceTree = "<group>"; };
 		04AB04611DA5047B005BE468 /* ActualAboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActualAboutViewController.swift; sourceTree = "<group>"; };
-		934127141F70008800D9A4AB /* PageControlPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControlPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,7 +197,6 @@
 		043B7C7A1DF4C18600CDA904 /* ConvertViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				934127141F70008800D9A4AB /* PageControlPageViewController.swift */,
 				0495F4841DF41AA800E22569 /* CelsiusToKelvinViewController.swift */,
 				04903FFB1D99FBF100D5A1FC /* FirstViewController.swift */,
 				040850511D9CEC110066A76C /* FourthViewController.swift */,
@@ -579,7 +576,6 @@
 				040850521D9CEC110066A76C /* FourthViewController.swift in Sources */,
 				0458C6D71DF539E700AB2991 /* TemperatureRange4.swift in Sources */,
 				04AB04621DA5047B005BE468 /* ActualAboutViewController.swift in Sources */,
-				934127151F70008800D9A4AB /* PageControlPageViewController.swift in Sources */,
 				04903FFA1D99FBF100D5A1FC /* AppDelegate.swift in Sources */,
 				049D8C101D9E2A81004CC057 /* AboutViewController.swift in Sources */,
 				049D8C0E1D9E1C1D004CC057 /* HelpViewController.swift in Sources */,
