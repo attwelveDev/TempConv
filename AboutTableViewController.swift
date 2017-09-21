@@ -31,7 +31,7 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
         ]
     
     let about = [
-        ("TempConv Site"),
+        ("@Twelve Site"),
         ("Privacy Policy"),
         ("More from the Developer"),
         ("About")
@@ -178,7 +178,7 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
     
     func configuredMailComposeViewController() -> MFMailComposeViewController {
         UINavigationBar.appearance().barTintColor = UIColor(red: 0.00, green: 0.42, blue: 0.98, alpha: 1.0)
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         UINavigationBar.appearance().tintColor = UIColor.white
         
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
@@ -241,7 +241,7 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
         
         self.navigationItem.title = "More"
         navigationController?.navigationBar.barTintColor = UIColor(red:0.00, green:0.42, blue:0.98, alpha:1.0)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         let backgroundImage = UIImage(named: "gradient_back")

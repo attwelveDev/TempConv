@@ -19,13 +19,11 @@ class FahrenheitToKelvinViewController: UIViewController, UIPickerViewDelegate, 
     var identity6 = "Fahrenheit"
     var identity7 = "kToC"
     var identity8 = "kToF"
-    
-    var effect: UIVisualEffect!
+
     @IBOutlet var conversionView: UIView!
     @IBOutlet var saveView: UIView!
     @IBOutlet var copyView: UIView!
     @IBOutlet weak var changeConversion: UIButton!
-    var visualEffectView: UIVisualEffectView!
     @IBAction func changeConversion(_ sender: Any) {
         tempLabel.isHidden = true
         changeConversion.isUserInteractionEnabled = false
@@ -38,7 +36,17 @@ class FahrenheitToKelvinViewController: UIViewController, UIPickerViewDelegate, 
         tempPicker.isUserInteractionEnabled = true
         animateOut()
     }
+    
+    let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.regular))
+    
     func animateIn() {
+        if !UIAccessibilityIsReduceTransparencyEnabled() {
+            blurEffectView.frame = self.view.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            
+            self.view.addSubview(blurEffectView)
+        }
+        
         self.view.addSubview(conversionView)
         conversionView.center = self.view.center
         
@@ -46,7 +54,10 @@ class FahrenheitToKelvinViewController: UIViewController, UIPickerViewDelegate, 
         conversionView.alpha = 0
         
         UIView.animate(withDuration: 0.4) {
-            self.visualEffectView?.effect = self.effect
+            
+            self.blurEffectView.alpha = 1
+            self.blurEffectView.transform = CGAffineTransform.identity
+            
             self.conversionView.alpha = 1
             self.conversionView.transform = CGAffineTransform.identity
         }
@@ -56,13 +67,20 @@ class FahrenheitToKelvinViewController: UIViewController, UIPickerViewDelegate, 
             self.conversionView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
             self.conversionView.alpha = 0
             
-            self.visualEffectView?.effect = nil
+            self.blurEffectView.removeFromSuperview()
             
         }) { (success: Bool) in
             self.conversionView.removeFromSuperview()
         }
     }
     func animateIn1() {
+        if !UIAccessibilityIsReduceTransparencyEnabled() {
+            blurEffectView.frame = self.view.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            
+            self.view.addSubview(blurEffectView)
+        }
+        
         self.view.addSubview(copyView)
         copyView.center = self.view.center
         
@@ -70,7 +88,10 @@ class FahrenheitToKelvinViewController: UIViewController, UIPickerViewDelegate, 
         copyView.alpha = 0
         
         UIView.animate(withDuration: 0.4) {
-            self.visualEffectView?.effect = self.effect
+            
+            self.blurEffectView.alpha = 1
+            self.blurEffectView.transform = CGAffineTransform.identity
+            
             self.copyView.alpha = 1
             self.copyView.transform = CGAffineTransform.identity
         }
@@ -80,7 +101,7 @@ class FahrenheitToKelvinViewController: UIViewController, UIPickerViewDelegate, 
             self.copyView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
             self.copyView.alpha = 0
             
-            self.visualEffectView?.effect = nil
+            self.blurEffectView.removeFromSuperview()
             
         }){(success: Bool) in
             self.copyView.removeFromSuperview()
@@ -88,6 +109,13 @@ class FahrenheitToKelvinViewController: UIViewController, UIPickerViewDelegate, 
     }
     
     func animateIn2() {
+        if !UIAccessibilityIsReduceTransparencyEnabled() {
+            blurEffectView.frame = self.view.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            
+            self.view.addSubview(blurEffectView)
+        }
+        
         self.view.addSubview(saveView)
         saveView.center = self.view.center
         
@@ -95,7 +123,10 @@ class FahrenheitToKelvinViewController: UIViewController, UIPickerViewDelegate, 
         saveView.alpha = 0
         
         UIView.animate(withDuration: 0.4) {
-            self.visualEffectView?.effect = self.effect
+            
+            self.blurEffectView.alpha = 1
+            self.blurEffectView.transform = CGAffineTransform.identity
+            
             self.saveView.alpha = 1
             self.saveView.transform = CGAffineTransform.identity
         }
@@ -105,20 +136,13 @@ class FahrenheitToKelvinViewController: UIViewController, UIPickerViewDelegate, 
             self.saveView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
             self.saveView.alpha = 0
             
-            self.visualEffectView?.effect = nil
+            self.blurEffectView.removeFromSuperview()
             
         }){(success: Bool) in
             self.saveView.removeFromSuperview()
         }
     }
-    
-    @IBAction func helpBTN(_ sender: AnyObject) {
-        
-        let vcName = identity2
-        let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
-        self.navigationController?.pushViewController(viewController!, animated: true)
-        
-    }
+
     @IBAction func fToC(_ sender: Any) {
         tempLabel.isHidden = false
         animateOut()
@@ -161,13 +185,15 @@ class FahrenheitToKelvinViewController: UIViewController, UIPickerViewDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Fahrenheit to Kelvin"
-        self.view.backgroundColor = UIColor.cyan
-        navigationController?.navigationBar.barTintColor = UIColor(red: 0.00, green: 0.42, blue: 0.98, alpha: 1.0)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationItem.title = "F° to K"
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+            navigationController!.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        } else {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
+        }
         
-        tempLabel.layer.cornerRadius = 5.0
+        tempLabel.layer.cornerRadius = tempLabel.frame.height / 2
         tempLabel.clipsToBounds = true
         
         conversionView.layer.cornerRadius = 5.0
@@ -178,7 +204,7 @@ class FahrenheitToKelvinViewController: UIViewController, UIPickerViewDelegate, 
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
-        sideBar = SideBar(sourceView: self.view, menuItems: ["From C°", "From K", "Saved", "Learn", "Add Widget", "More"])
+        sideBar = SideBar(sourceView: self.view, menuItems: ["From C°", "From K", "Help", "Saved", "Learn", "Add Widget", "More"])
         sideBar.delegate = self
         
         // Do any additional setup after loading the view.
@@ -187,6 +213,11 @@ class FahrenheitToKelvinViewController: UIViewController, UIPickerViewDelegate, 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        tempPicker.subviews[1].isHidden = true
+        tempPicker.subviews[2].isHidden = true
     }
     
     @IBOutlet weak var copyLabel: UILabel!
@@ -320,7 +351,7 @@ class FahrenheitToKelvinViewController: UIViewController, UIPickerViewDelegate, 
         } else if index == 2 {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let ivc = storyboard.instantiateViewController(withIdentifier: "save")
+            let ivc = storyboard.instantiateViewController(withIdentifier: "1")
             ivc.modalPresentationStyle = .custom
             ivc.modalTransitionStyle = .crossDissolve
             self.navigationController?.pushViewController(ivc, animated: true)
@@ -328,7 +359,7 @@ class FahrenheitToKelvinViewController: UIViewController, UIPickerViewDelegate, 
         } else if index == 3 {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let ivc = storyboard.instantiateViewController(withIdentifier: identity3)
+            let ivc = storyboard.instantiateViewController(withIdentifier: "save")
             ivc.modalPresentationStyle = .custom
             ivc.modalTransitionStyle = .crossDissolve
             self.navigationController?.pushViewController(ivc, animated: true)
@@ -336,12 +367,20 @@ class FahrenheitToKelvinViewController: UIViewController, UIPickerViewDelegate, 
         } else if index == 4 {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let ivc = storyboard.instantiateViewController(withIdentifier: identity5)
+            let ivc = storyboard.instantiateViewController(withIdentifier: identity3)
             ivc.modalPresentationStyle = .custom
             ivc.modalTransitionStyle = .crossDissolve
             self.navigationController?.pushViewController(ivc, animated: true)
             
         } else if index == 5 {
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let ivc = storyboard.instantiateViewController(withIdentifier: identity5)
+            ivc.modalPresentationStyle = .custom
+            ivc.modalTransitionStyle = .crossDissolve
+            self.navigationController?.pushViewController(ivc, animated: true)
+            
+        } else if index == 6 {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let ivc = storyboard.instantiateViewController(withIdentifier: identity4)
@@ -371,6 +410,19 @@ class FahrenheitToKelvinViewController: UIViewController, UIPickerViewDelegate, 
         let degreesFahrenheit = tempRange.values[row]
         
         tempLabel.text = "\(converter.degreesKelvin(degreesFahrenheit)) K"
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        label.text = "\(tempRange.values[row])°F"
+        label.textColor = UIColor.white
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 25)
+        view.addSubview(label)
+        
+        return view
     }
     /*
     // MARK: - Navigation

@@ -36,7 +36,7 @@ class AboutViewController: UIViewController, SFSafariViewControllerDelegate, Sid
         // Do any additional setup after loading the view.
         
         self.navigationItem.title = "Learn"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.view.backgroundColor = UIColor.cyan
         

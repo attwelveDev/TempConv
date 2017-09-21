@@ -94,7 +94,7 @@ class DeveloperTableViewController: UITableViewController {
         
         self.navigationItem.title = "More from the Developer"
         navigationController?.navigationBar.barTintColor = UIColor(red:0.00, green:0.42, blue:0.98, alpha:1.0)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         let backgroundImage = UIImage(named: "gradient_back")

@@ -25,12 +25,10 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
     // add views
     
     @IBOutlet weak var background: UIImageView!
-    var effect: UIVisualEffect!
     @IBOutlet var conversionView: UIView!
     @IBOutlet var saveView: UIView!
     @IBOutlet var copyView: UIView!
     @IBOutlet weak var changeConversion: UIButton!
-    var visualEffectView: UIVisualEffectView!
     @IBAction func changeConversion(_ sender: Any) {
         tempLabel.isHidden = true
         changeConversion.isUserInteractionEnabled = false
@@ -43,26 +41,38 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
         tempPicker.isUserInteractionEnabled = true
         animateOut()
     }
+    
+    let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.regular))
+    
     func animateIn() {
-        self.view.addSubview(conversionView)
-        conversionView.center = self.view.center
+        if !UIAccessibilityIsReduceTransparencyEnabled() {
+            blurEffectView.frame = self.view.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            
+            self.view.addSubview(blurEffectView)
+        }
         
-        conversionView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
-        conversionView.alpha = 0
+        self.view.addSubview(self.conversionView)
+        self.conversionView.center = self.view.center
+        
+        self.conversionView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        self.conversionView.alpha = 0
         
         UIView.animate(withDuration: 0.4) {
-            self.visualEffectView?.effect = self.effect
+            
+            self.blurEffectView.alpha = 1
+            self.blurEffectView.transform = CGAffineTransform.identity
+            
             self.conversionView.alpha = 1
             self.conversionView.transform = CGAffineTransform.identity
         }
-
     }
     func animateOut() {
         UIView.animate(withDuration: 0.3, animations: {
             self.conversionView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
             self.conversionView.alpha = 0
-            
-            self.visualEffectView?.effect = nil
+
+            self.blurEffectView.removeFromSuperview()
             
         }){(success: Bool) in
             self.conversionView.removeFromSuperview()
@@ -70,6 +80,13 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
     }
     
     func animateIn1() {
+        if !UIAccessibilityIsReduceTransparencyEnabled() {
+            blurEffectView.frame = self.view.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            
+            self.view.addSubview(blurEffectView)
+        }
+        
         self.view.addSubview(copyView)
         copyView.center = self.view.center
         
@@ -77,17 +94,21 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
         copyView.alpha = 0
         
         UIView.animate(withDuration: 0.4) {
-            self.visualEffectView?.effect = self.effect
+            
+            self.blurEffectView.alpha = 1
+            self.blurEffectView.transform = CGAffineTransform.identity
+            
             self.copyView.alpha = 1
             self.copyView.transform = CGAffineTransform.identity
         }
     }
     func animateOut1() {
+        
         UIView.animate(withDuration: 0.3, animations: {
             self.copyView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
             self.copyView.alpha = 0
             
-            self.visualEffectView?.effect = nil
+            self.blurEffectView.removeFromSuperview()
             
         }){(success: Bool) in
             self.copyView.removeFromSuperview()
@@ -95,6 +116,13 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
     }
     
     func animateIn2() {
+        if !UIAccessibilityIsReduceTransparencyEnabled() {
+            blurEffectView.frame = self.view.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            
+            self.view.addSubview(blurEffectView)
+        }
+        
         self.view.addSubview(saveView)
         saveView.center = self.view.center
         
@@ -102,7 +130,9 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
         saveView.alpha = 0
         
         UIView.animate(withDuration: 0.4) {
-            self.visualEffectView?.effect = self.effect
+            self.blurEffectView.alpha = 1
+            self.blurEffectView.transform = CGAffineTransform.identity
+            
             self.saveView.alpha = 1
             self.saveView.transform = CGAffineTransform.identity
         }
@@ -112,7 +142,7 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
             self.saveView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
             self.saveView.alpha = 0
             
-            self.visualEffectView?.effect = nil
+            self.blurEffectView.removeFromSuperview()
             
         }){(success: Bool) in
             self.saveView.removeFromSuperview()
@@ -129,13 +159,6 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
     @IBOutlet var tempRange: TemperatureRange!
     @IBOutlet weak var tempPicker: UIPickerView!
     @IBOutlet weak var tempLabel: UILabel!
-//    @IBAction func helpBTN(_ sender: AnyObject) {
-//        
-//        let vcName = identity
-//        let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
-//        self.navigationController?.pushViewController(viewController!, animated: true)
-//        
-//    }
     
     @IBAction func reverse(_ sender: Any) {
         animateOut()
@@ -174,9 +197,7 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        
-//        view.transform = CGAffineTransform(rotationAngle: (90 * (.pi / 180)))
-        
+
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         label.text = "\(tempRange.values[row])°C"
         label.textColor = UIColor.white
@@ -186,42 +207,28 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
         
         return view
     }
-//    
-//    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-//        return 100
-//    }
-//    
-//    var rotationAngle: CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = "C° to F°"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 25), NSForegroundColorAttributeName: UIColor.white]
-        
-//        navigationController?.navigationBar.barTintColor = UIColor(red:0.00, green:0.42, blue:0.98, alpha:1.0)
-        
-//        rotationAngle = -90 * (.pi/180)
-//        
-//        let y = tempPicker.frame.origin.y
-//        tempPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
-//        tempPicker.frame = CGRect(x: -100, y: y, width: view.frame.width + 200, height: 100)
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+            navigationController!.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        } else {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
+        }
         
         tempLabel.layer.cornerRadius = tempLabel.frame.height / 2
         tempLabel.clipsToBounds = true
         
-        effect = visualEffectView?.effect
-        visualEffectView?.effect = nil
-        
         conversionView.layer.cornerRadius = 5.0
         copyView.layer.cornerRadius = 5.0
         saveView.layer.cornerRadius = 5.0
-        
-        
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
-        sideBar = SideBar(sourceView: self.view, menuItems: ["From F°", "From K", "Saved", "Learn", "Add Widget", "More"])
+        sideBar = SideBar(sourceView: self.view, menuItems: ["From F°", "From K", "Help", "Saved", "Learn", "Add Widget", "More"])
         sideBar.delegate = self
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -393,7 +400,7 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
         } else if index == 2 {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let ivc = storyboard.instantiateViewController(withIdentifier: "save")
+            let ivc = storyboard.instantiateViewController(withIdentifier: "1")
             ivc.modalPresentationStyle = .custom
             ivc.modalTransitionStyle = .crossDissolve
             self.navigationController?.pushViewController(ivc, animated: true)
@@ -401,7 +408,7 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
         } else if index == 3 {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let ivc = storyboard.instantiateViewController(withIdentifier: identity2)
+            let ivc = storyboard.instantiateViewController(withIdentifier: "save")
             ivc.modalPresentationStyle = .custom
             ivc.modalTransitionStyle = .crossDissolve
             self.navigationController?.pushViewController(ivc, animated: true)
@@ -409,12 +416,20 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
         } else if index == 4 {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let ivc = storyboard.instantiateViewController(withIdentifier: identity2)
+            ivc.modalPresentationStyle = .custom
+            ivc.modalTransitionStyle = .crossDissolve
+            self.navigationController?.pushViewController(ivc, animated: true)
+            
+        } else if index == 5 {
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let ivc = storyboard.instantiateViewController(withIdentifier: identity5)
             ivc.modalPresentationStyle = .custom
             ivc.modalTransitionStyle = .crossDissolve
             self.navigationController?.pushViewController(ivc, animated: true)
 
-        } else if index == 5 {
+        } else if index == 6 {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let ivc = storyboard.instantiateViewController(withIdentifier: identity6)

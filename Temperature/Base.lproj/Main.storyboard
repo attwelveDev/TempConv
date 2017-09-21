@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8hp-sJ-Ksc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8hp-sJ-Ksc">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,7 +26,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_back" translatesAutoresizingMaskIntoConstraints="NO" id="IJM-hC-bOJ">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keb-Uw-luo">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" indicatorStyle="white" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keb-Uw-luo">
                                 <rect key="frame" x="16" y="28" width="288" height="520"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">TempConv - Temperature Converter 
@@ -56,9 +56,9 @@ Thank you for reading this and continuing to use this app. Enjoy using TempConv!
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWw-oA-rRA">
-                                <rect key="frame" x="33" y="506" width="255" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.45524883269999999" blue="0.97935324909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <rect key="frame" x="33" y="500" width="255" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Read More">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -109,7 +109,7 @@ Thank you for reading this and continuing to use this app. Enjoy using TempConv!
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_back" translatesAutoresizingMaskIntoConstraints="NO" id="cLX-GK-3CA">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lz9-hZ-4NO">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" indicatorStyle="white" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lz9-hZ-4NO">
                                 <rect key="frame" x="16" y="72" width="288" height="476"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Celsius (C°) and Fahrenheit (F°) are the two main units of measuring temperature. Kelvin (K) is also another unit of temperature measurement.
@@ -124,9 +124,9 @@ There are many other types of unit of temperature measurement including Rankine 
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QxZ-kz-Goz">
-                                <rect key="frame" x="33" y="505" width="255" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.45524883270263672" blue="0.97935324907302856" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <rect key="frame" x="33" y="499" width="255" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Read more">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -253,16 +253,6 @@ Your widget has now been successfully added!</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_back" translatesAutoresizingMaskIntoConstraints="NO" id="4iN-dV-FZ6">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFc-iU-cuo">
-                                <rect key="frame" x="93" y="64" width="134" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Change Conversion">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeConversion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WBE-Wh-aVD"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-148°F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYu-5A-8VR">
                                 <rect key="frame" x="40" y="164" width="240" height="240"/>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
@@ -270,7 +260,7 @@ Your widget has now been successfully added!</string>
                                     <constraint firstAttribute="height" constant="240" id="SXt-w7-i1K"/>
                                     <constraint firstAttribute="width" secondItem="LYu-5A-8VR" secondAttribute="height" multiplier="1:1" id="xhp-gZ-MFi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <connections>
@@ -278,7 +268,7 @@ Your widget has now been successfully added!</string>
                                     <outletCollection property="gestureRecognizers" destination="s63-5j-3hj" appends="YES" id="LhL-9q-o2Q"/>
                                 </connections>
                             </label>
-                            <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3c-LO-w30">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V3c-LO-w30">
                                 <rect key="frame" x="0.0" y="352" width="320" height="216"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -286,6 +276,16 @@ Your widget has now been successfully added!</string>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="vYu-hQ-76t"/>
                                 </connections>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFc-iU-cuo">
+                                <rect key="frame" x="16" y="64" width="142" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Change Conversion">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeConversion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WBE-Wh-aVD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -295,13 +295,14 @@ Your widget has now been successfully added!</string>
                             <constraint firstItem="dFc-iU-cuo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Bz7-ed-X9Z"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4iN-dV-FZ6" secondAttribute="bottom" id="CUY-nP-iGC"/>
                             <constraint firstItem="LYu-5A-8VR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EA6-ab-XTg"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dFc-iU-cuo" secondAttribute="trailing" constant="20" symbolic="YES" id="Smq-UU-iTP"/>
+                            <constraint firstItem="dFc-iU-cuo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="e8j-pG-WTm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4iN-dV-FZ6" secondAttribute="trailing" constant="-20" id="eKb-FJ-mvZ"/>
                             <constraint firstItem="4iN-dV-FZ6" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="gm1-vS-nlb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="V3c-LO-w30" secondAttribute="bottom" id="koY-J7-WwI"/>
                             <constraint firstItem="4iN-dV-FZ6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qEo-HA-ijn"/>
                             <constraint firstItem="V3c-LO-w30" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="t7Z-Os-1LE"/>
                             <constraint firstItem="4iN-dV-FZ6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uhP-tf-Qyv"/>
-                            <constraint firstItem="dFc-iU-cuo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wzN-On-MY3"/>
                             <constraint firstItem="4iN-dV-FZ6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="z3O-fk-lME"/>
                         </constraints>
                     </view>
@@ -396,16 +397,16 @@ Your widget has now been successfully added!</string>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jjA-Uj-i7Q">
-                            <rect key="frame" x="5" y="36" width="278" height="90"/>
+                            <rect key="frame" x="5" y="33" width="278" height="94.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copy \()?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UM9-s7-7hx">
-                                    <rect key="frame" x="102.5" y="0.0" width="73.5" height="21.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <rect key="frame" x="90.5" y="0.0" width="97.5" height="26.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DES-Ia-yqY">
-                                    <rect key="frame" x="124" y="22" width="30" height="34"/>
+                                    <rect key="frame" x="124" y="26.5" width="30" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <state key="normal" title="OK">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -415,7 +416,7 @@ Your widget has now been successfully added!</string>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITj-o5-x9E">
-                                    <rect key="frame" x="110" y="56" width="58" height="34"/>
+                                    <rect key="frame" x="110" y="60.5" width="58" height="34"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="Cancel">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -427,7 +428,7 @@ Your widget has now been successfully added!</string>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="width" constant="278" id="4Ll-WM-03T"/>
-                                <constraint firstAttribute="height" constant="89.5" id="qHw-m6-BgU"/>
+                                <constraint firstAttribute="height" constant="94.5" id="P7w-mu-T3N"/>
                             </constraints>
                         </stackView>
                     </subviews>
@@ -444,16 +445,16 @@ Your widget has now been successfully added!</string>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XYZ-Cg-1aa">
-                            <rect key="frame" x="5.5" y="35" width="278" height="90"/>
+                            <rect key="frame" x="5" y="33" width="278" height="94.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save \()?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPY-bt-H0t">
-                                    <rect key="frame" x="104" y="0.0" width="70.5" height="21.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <rect key="frame" x="92" y="0.0" width="94" height="26.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cA1-AD-plV">
-                                    <rect key="frame" x="124" y="22" width="30" height="34"/>
+                                    <rect key="frame" x="124" y="26.5" width="30" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <state key="normal" title="OK">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -463,7 +464,7 @@ Your widget has now been successfully added!</string>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4Q-Km-qvS">
-                                    <rect key="frame" x="110" y="56" width="58" height="34"/>
+                                    <rect key="frame" x="110" y="60.5" width="58" height="34"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="Cancel">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -474,8 +475,8 @@ Your widget has now been successfully added!</string>
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="89.5" id="hKC-ag-vgk"/>
                                 <constraint firstAttribute="width" constant="278" id="hfp-LG-SAJ"/>
+                                <constraint firstAttribute="height" constant="94.5" id="oMm-Rj-1IF"/>
                             </constraints>
                         </stackView>
                     </subviews>
@@ -513,30 +514,22 @@ Your widget has now been successfully added!</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_back" translatesAutoresizingMaskIntoConstraints="NO" id="g1h-m9-Ym5">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                             </imageView>
-                            <label opaque="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 K" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6a-NO-Svl">
-                                <rect key="frame" x="16" y="203.5" width="288" height="161"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 K" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6a-NO-Svl">
+                                <rect key="frame" x="40" y="164" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="161" id="Onz-OX-NSV"/>
+                                    <constraint firstAttribute="width" secondItem="y6a-NO-Svl" secondAttribute="height" multiplier="1:1" id="MB4-SE-2ON"/>
+                                    <constraint firstAttribute="height" constant="240" id="ubW-Tk-9iY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
-                                <color key="textColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="FKU-Cm-sod" appends="YES" id="G6O-WB-eSA"/>
                                     <outletCollection property="gestureRecognizers" destination="Oft-OG-Meo" appends="YES" id="7By-rq-BJA"/>
                                 </connections>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsY-92-GtT">
-                                <rect key="frame" x="93" y="64" width="134" height="30"/>
-                                <state key="normal" title="Change Conversion">
-                                    <color key="titleColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeConversion:" destination="dhi-e5-LOY" eventType="touchUpInside" id="Czq-3E-5L3"/>
-                                </connections>
-                            </button>
-                            <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLj-Jk-M5R">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lLj-Jk-M5R">
                                 <rect key="frame" x="0.0" y="352" width="320" height="216"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -544,24 +537,33 @@ Your widget has now been successfully added!</string>
                                     <outlet property="delegate" destination="dhi-e5-LOY" id="znA-6k-6tB"/>
                                 </connections>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsY-92-GtT">
+                                <rect key="frame" x="16" y="64" width="142" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Change Conversion">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeConversion:" destination="dhi-e5-LOY" eventType="touchUpInside" id="Czq-3E-5L3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SsY-92-GtT" firstAttribute="top" secondItem="FBh-pi-Qnx" secondAttribute="bottom" id="49A-La-DL0"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="y6a-NO-Svl" secondAttribute="leading" id="Agq-ao-xCS"/>
-                            <constraint firstItem="y6a-NO-Svl" firstAttribute="centerX" secondItem="Qap-Ok-0ZJ" secondAttribute="centerX" id="EhS-qh-TZF"/>
                             <constraint firstItem="g1h-m9-Ym5" firstAttribute="centerY" secondItem="Qap-Ok-0ZJ" secondAttribute="centerY" id="H4O-X7-LMZ"/>
-                            <constraint firstItem="SsY-92-GtT" firstAttribute="centerX" secondItem="Qap-Ok-0ZJ" secondAttribute="centerX" id="J1i-n9-w1w"/>
+                            <constraint firstItem="SsY-92-GtT" firstAttribute="leading" secondItem="Qap-Ok-0ZJ" secondAttribute="leading" constant="16" id="Htx-wG-ifV"/>
                             <constraint firstItem="g4h-fy-Vgi" firstAttribute="top" secondItem="g1h-m9-Ym5" secondAttribute="bottom" id="KVr-Bo-wfj"/>
                             <constraint firstItem="g1h-m9-Ym5" firstAttribute="height" secondItem="Qap-Ok-0ZJ" secondAttribute="height" id="LRp-HZ-IpF"/>
                             <constraint firstItem="lLj-Jk-M5R" firstAttribute="centerX" secondItem="Qap-Ok-0ZJ" secondAttribute="centerX" id="N6m-aF-oEK"/>
                             <constraint firstItem="g1h-m9-Ym5" firstAttribute="centerX" secondItem="Qap-Ok-0ZJ" secondAttribute="centerX" id="Y0n-XD-29Z"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SsY-92-GtT" secondAttribute="trailing" constant="20" symbolic="YES" id="YHx-Kd-evd"/>
                             <constraint firstItem="lLj-Jk-M5R" firstAttribute="width" secondItem="Qap-Ok-0ZJ" secondAttribute="width" id="drA-og-D3N"/>
                             <constraint firstItem="g1h-m9-Ym5" firstAttribute="leading" secondItem="Qap-Ok-0ZJ" secondAttribute="leadingMargin" constant="-20" id="ix5-uR-b7m"/>
                             <constraint firstItem="g4h-fy-Vgi" firstAttribute="top" secondItem="lLj-Jk-M5R" secondAttribute="bottom" id="lh5-kd-5LM"/>
-                            <constraint firstItem="y6a-NO-Svl" firstAttribute="centerY" secondItem="Qap-Ok-0ZJ" secondAttribute="centerY" id="q5o-Jn-A2I"/>
                             <constraint firstAttribute="trailingMargin" secondItem="g1h-m9-Ym5" secondAttribute="trailing" constant="-20" id="qvC-Nz-jxh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="y6a-NO-Svl" secondAttribute="trailing" id="ziq-je-sNY"/>
+                            <constraint firstItem="y6a-NO-Svl" firstAttribute="centerY" secondItem="Qap-Ok-0ZJ" secondAttribute="centerY" id="ygn-1V-gKw"/>
+                            <constraint firstItem="y6a-NO-Svl" firstAttribute="centerX" secondItem="Qap-Ok-0ZJ" secondAttribute="centerX" id="zac-b5-SRh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wkR-2u-84w">
@@ -569,12 +571,6 @@ Your widget has now been successfully added!</string>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="openSideBar:" destination="dhi-e5-LOY" id="0ZL-S3-u9K"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Help" id="Wou-gy-QMJ">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="helpBTN:" destination="dhi-e5-LOY" id="ITo-ew-tdC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -660,16 +656,16 @@ Your widget has now been successfully added!</string>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hZg-Bw-cs5">
-                            <rect key="frame" x="5" y="36" width="278" height="90"/>
+                            <rect key="frame" x="5" y="33" width="278" height="94.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copy \()?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmJ-3b-lkX">
-                                    <rect key="frame" x="102.5" y="0.0" width="73.5" height="21.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <rect key="frame" x="90.5" y="0.0" width="97.5" height="26.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtA-MZ-gFR">
-                                    <rect key="frame" x="124" y="22" width="30" height="34"/>
+                                    <rect key="frame" x="124" y="26.5" width="30" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <state key="normal" title="OK">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -679,7 +675,7 @@ Your widget has now been successfully added!</string>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="The-QT-ZXQ">
-                                    <rect key="frame" x="110" y="56" width="58" height="34"/>
+                                    <rect key="frame" x="110" y="60.5" width="58" height="34"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="Cancel">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -691,7 +687,7 @@ Your widget has now been successfully added!</string>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="width" constant="278" id="0s3-of-YSx"/>
-                                <constraint firstAttribute="height" constant="89.5" id="iyD-kv-be3"/>
+                                <constraint firstAttribute="height" constant="94.5" id="9Vs-Eh-Z2U"/>
                             </constraints>
                         </stackView>
                     </subviews>
@@ -708,16 +704,16 @@ Your widget has now been successfully added!</string>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iuO-Ab-VYz">
-                            <rect key="frame" x="5.5" y="35" width="278" height="90"/>
+                            <rect key="frame" x="5" y="33" width="278" height="94.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save \()?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaA-iv-Zf4">
-                                    <rect key="frame" x="104" y="0.0" width="70.5" height="21.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <rect key="frame" x="92" y="0.0" width="94" height="26.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1J-eS-XIy">
-                                    <rect key="frame" x="124" y="22" width="30" height="34"/>
+                                    <rect key="frame" x="124" y="26.5" width="30" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <state key="normal" title="OK">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -728,7 +724,7 @@ Your widget has now been successfully added!</string>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MC7-5s-ZS0">
-                                    <rect key="frame" x="110" y="56" width="58" height="34"/>
+                                    <rect key="frame" x="110" y="60.5" width="58" height="34"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="Cancel">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -740,8 +736,8 @@ Your widget has now been successfully added!</string>
                                 </button>
                             </subviews>
                             <constraints>
+                                <constraint firstAttribute="height" constant="94.5" id="BgO-q8-YQB"/>
                                 <constraint firstAttribute="width" constant="278" id="Kyp-ED-X3k"/>
-                                <constraint firstAttribute="height" constant="89.5" id="LF0-ar-kVp"/>
                             </constraints>
                         </stackView>
                     </subviews>
@@ -779,7 +775,7 @@ Your widget has now been successfully added!</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_back" translatesAutoresizingMaskIntoConstraints="NO" id="Fc0-Yj-XEB">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                             </imageView>
-                            <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnh-d1-G5h">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wnh-d1-G5h">
                                 <rect key="frame" x="0.0" y="352" width="320" height="216"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -787,14 +783,15 @@ Your widget has now been successfully added!</string>
                                     <outlet property="delegate" destination="cva-zi-lPD" id="sfA-JF-GWA"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-101°C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqS-zE-60c">
-                                <rect key="frame" x="16" y="203.5" width="288" height="161"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-101°C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqS-zE-60c">
+                                <rect key="frame" x="40" y="164" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="161" id="HPe-tT-LCq"/>
+                                    <constraint firstAttribute="height" constant="240" id="EbF-mB-cBG"/>
+                                    <constraint firstAttribute="width" secondItem="MqS-zE-60c" secondAttribute="height" multiplier="1:1" id="F3a-1c-CA5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
-                                <color key="textColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="leX-nk-jxu" appends="YES" id="y3F-1T-kvM"/>
@@ -802,9 +799,10 @@ Your widget has now been successfully added!</string>
                                 </connections>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JK9-50-Tut">
-                                <rect key="frame" x="93" y="64" width="134" height="30"/>
+                                <rect key="frame" x="16" y="64" width="142" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Change Conversion">
-                                    <color key="titleColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="changeConversion:" destination="cva-zi-lPD" eventType="touchUpInside" id="2fe-Wn-nZi"/>
@@ -813,21 +811,20 @@ Your widget has now been successfully added!</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="MqS-zE-60c" firstAttribute="centerY" secondItem="QLS-vg-fBZ" secondAttribute="centerY" id="1Ao-7z-XxY"/>
+                            <constraint firstItem="JK9-50-Tut" firstAttribute="leading" secondItem="QLS-vg-fBZ" secondAttribute="leading" constant="16" id="4nh-ts-5Og"/>
                             <constraint firstItem="ZSX-dU-gGZ" firstAttribute="top" secondItem="Fc0-Yj-XEB" secondAttribute="bottom" id="73c-i1-7Zp"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="MqS-zE-60c" secondAttribute="leading" id="8BV-N3-K02"/>
                             <constraint firstItem="Fc0-Yj-XEB" firstAttribute="centerX" secondItem="QLS-vg-fBZ" secondAttribute="centerX" id="9V7-fT-7H2"/>
-                            <constraint firstItem="MqS-zE-60c" firstAttribute="centerY" secondItem="QLS-vg-fBZ" secondAttribute="centerY" id="ERK-h4-s70"/>
+                            <constraint firstItem="Wnh-d1-G5h" firstAttribute="width" secondItem="QLS-vg-fBZ" secondAttribute="width" id="DEf-wa-bHn"/>
                             <constraint firstItem="Fc0-Yj-XEB" firstAttribute="centerY" secondItem="QLS-vg-fBZ" secondAttribute="centerY" id="HMg-ld-t7W"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="MqS-zE-60c" secondAttribute="trailing" id="I2e-Lr-JIx"/>
-                            <constraint firstItem="MqS-zE-60c" firstAttribute="centerX" secondItem="QLS-vg-fBZ" secondAttribute="centerX" id="JYd-Zc-w4z"/>
                             <constraint firstItem="Fc0-Yj-XEB" firstAttribute="leading" secondItem="QLS-vg-fBZ" secondAttribute="leadingMargin" constant="-20" id="P2I-z3-qH5"/>
                             <constraint firstItem="Wnh-d1-G5h" firstAttribute="bottom" secondItem="ZSX-dU-gGZ" secondAttribute="top" id="QGX-NK-Tg5"/>
+                            <constraint firstItem="Wnh-d1-G5h" firstAttribute="centerX" secondItem="QLS-vg-fBZ" secondAttribute="centerX" id="R2d-0N-rIB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Fc0-Yj-XEB" secondAttribute="trailing" constant="-20" id="Rdv-2t-CLp"/>
                             <constraint firstItem="JK9-50-Tut" firstAttribute="top" secondItem="UGB-kA-beL" secondAttribute="bottom" id="S0L-bc-Tdp"/>
+                            <constraint firstItem="MqS-zE-60c" firstAttribute="centerX" secondItem="QLS-vg-fBZ" secondAttribute="centerX" id="WhM-av-9vc"/>
                             <constraint firstItem="Fc0-Yj-XEB" firstAttribute="height" secondItem="QLS-vg-fBZ" secondAttribute="height" id="Xc6-NO-Fgn"/>
-                            <constraint firstItem="JK9-50-Tut" firstAttribute="centerX" secondItem="QLS-vg-fBZ" secondAttribute="centerX" id="dha-kj-f3w"/>
-                            <constraint firstItem="Wnh-d1-G5h" firstAttribute="leading" secondItem="QLS-vg-fBZ" secondAttribute="leading" id="sKb-s5-ShH"/>
-                            <constraint firstItem="Wnh-d1-G5h" firstAttribute="centerX" secondItem="MqS-zE-60c" secondAttribute="centerX" id="ujc-em-aKW"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JK9-50-Tut" secondAttribute="trailing" constant="20" symbolic="YES" id="diJ-nm-vFC"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -836,12 +833,6 @@ Your widget has now been successfully added!</string>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="openSideBar:" destination="cva-zi-lPD" id="rdY-32-GnY"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Help" id="4xv-QY-8bo">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="helpBTN:" destination="cva-zi-lPD" id="yJj-59-AtE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -928,16 +919,16 @@ Your widget has now been successfully added!</string>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xtg-n3-qqZ">
-                            <rect key="frame" x="5" y="36" width="278" height="90"/>
+                            <rect key="frame" x="5" y="33" width="278" height="94.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copy \()?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgD-99-jRG">
-                                    <rect key="frame" x="102.5" y="0.0" width="73.5" height="21.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <rect key="frame" x="90.5" y="0.0" width="97.5" height="26.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ma9-Be-pY1">
-                                    <rect key="frame" x="124" y="22" width="30" height="34"/>
+                                    <rect key="frame" x="124" y="26.5" width="30" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <state key="normal" title="OK">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -947,7 +938,7 @@ Your widget has now been successfully added!</string>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOh-Mc-vAn">
-                                    <rect key="frame" x="110" y="56" width="58" height="34"/>
+                                    <rect key="frame" x="110" y="60.5" width="58" height="34"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="Cancel">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -958,8 +949,8 @@ Your widget has now been successfully added!</string>
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="89.5" id="0hI-eH-cdk"/>
                                 <constraint firstAttribute="width" constant="278" id="9yz-jC-0ey"/>
+                                <constraint firstAttribute="height" constant="94.5" id="Uxc-gf-Ue9"/>
                             </constraints>
                         </stackView>
                     </subviews>
@@ -976,16 +967,16 @@ Your widget has now been successfully added!</string>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="77k-8C-1t1">
-                            <rect key="frame" x="5.5" y="35" width="278" height="90"/>
+                            <rect key="frame" x="5" y="33" width="278" height="94.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save \()?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYS-hH-9N9">
-                                    <rect key="frame" x="104" y="0.0" width="70.5" height="21.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <rect key="frame" x="92" y="0.0" width="94" height="26.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSE-Wp-vQN">
-                                    <rect key="frame" x="124" y="22" width="30" height="34"/>
+                                    <rect key="frame" x="124" y="26.5" width="30" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <state key="normal" title="OK">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -996,7 +987,7 @@ Your widget has now been successfully added!</string>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2e-20-L6T">
-                                    <rect key="frame" x="110" y="56" width="58" height="34"/>
+                                    <rect key="frame" x="110" y="60.5" width="58" height="34"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="Cancel">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1009,7 +1000,7 @@ Your widget has now been successfully added!</string>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="width" constant="278" id="CZs-am-kd1"/>
-                                <constraint firstAttribute="height" constant="89.5" id="c9i-2K-JgR"/>
+                                <constraint firstAttribute="height" constant="94.5" id="vVW-nr-5sM"/>
                             </constraints>
                         </stackView>
                     </subviews>
@@ -1047,30 +1038,22 @@ Your widget has now been successfully added!</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_back" translatesAutoresizingMaskIntoConstraints="NO" id="Zc0-4l-I3L">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAz-RD-0ZT">
-                                <rect key="frame" x="93" y="64" width="134" height="30"/>
-                                <state key="normal" title="Change Conversion">
-                                    <color key="titleColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeConversion:" destination="yZR-Uh-jZf" eventType="touchUpInside" id="0kW-c3-3vu"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 K" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3k3-ou-xNr">
-                                <rect key="frame" x="16" y="203.5" width="288" height="161"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 K" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3k3-ou-xNr">
+                                <rect key="frame" x="40" y="164" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="161" id="PcM-pQ-IJk"/>
+                                    <constraint firstAttribute="height" constant="240" id="2bX-H2-SLc"/>
+                                    <constraint firstAttribute="width" secondItem="3k3-ou-xNr" secondAttribute="height" multiplier="1:1" id="AtG-gs-6o7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
-                                <color key="textColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="UNr-Ih-Bzz" appends="YES" id="aw7-Zp-7ha"/>
                                     <outletCollection property="gestureRecognizers" destination="faa-3C-mnN" appends="YES" id="NCm-Wt-Grg"/>
                                 </connections>
                             </label>
-                            <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nr-be-gEG">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nr-be-gEG">
                                 <rect key="frame" x="0.0" y="352" width="320" height="216"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -1078,24 +1061,33 @@ Your widget has now been successfully added!</string>
                                     <outlet property="delegate" destination="yZR-Uh-jZf" id="Dg7-iZ-329"/>
                                 </connections>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAz-RD-0ZT">
+                                <rect key="frame" x="16" y="64" width="142" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Change Conversion">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeConversion:" destination="yZR-Uh-jZf" eventType="touchUpInside" id="0kW-c3-3vu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CAz-RD-0ZT" firstAttribute="top" secondItem="muc-p7-5B5" secondAttribute="bottom" id="5rX-7A-9Sm"/>
+                            <constraint firstItem="3k3-ou-xNr" firstAttribute="centerY" secondItem="GQN-No-gCL" secondAttribute="centerY" id="6hm-z9-zQR"/>
                             <constraint firstItem="Zc0-4l-I3L" firstAttribute="centerY" secondItem="GQN-No-gCL" secondAttribute="centerY" id="98S-6U-NfL"/>
-                            <constraint firstItem="3k3-ou-xNr" firstAttribute="centerY" secondItem="GQN-No-gCL" secondAttribute="centerY" id="B9h-fO-hi9"/>
                             <constraint firstItem="Zc0-4l-I3L" firstAttribute="leading" secondItem="GQN-No-gCL" secondAttribute="leadingMargin" constant="-20" id="Bpr-T7-bis"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3k3-ou-xNr" secondAttribute="trailing" id="Flo-8G-3oi"/>
                             <constraint firstItem="8nr-be-gEG" firstAttribute="centerX" secondItem="GQN-No-gCL" secondAttribute="centerX" id="GWX-IS-0SI"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="3k3-ou-xNr" secondAttribute="leading" id="KQd-k9-XzK"/>
                             <constraint firstItem="HMU-Ep-PlT" firstAttribute="top" secondItem="8nr-be-gEG" secondAttribute="bottom" id="OER-SU-MT6"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CAz-RD-0ZT" secondAttribute="trailing" constant="20" symbolic="YES" id="PAG-Xf-OEg"/>
                             <constraint firstItem="8nr-be-gEG" firstAttribute="width" secondItem="GQN-No-gCL" secondAttribute="width" id="QV6-FW-i3I"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zc0-4l-I3L" secondAttribute="trailing" constant="-20" id="RMt-cZ-huq"/>
                             <constraint firstItem="Zc0-4l-I3L" firstAttribute="centerX" secondItem="GQN-No-gCL" secondAttribute="centerX" id="SzS-fV-koK"/>
                             <constraint firstItem="Zc0-4l-I3L" firstAttribute="height" secondItem="GQN-No-gCL" secondAttribute="height" id="Tfh-eZ-saH"/>
-                            <constraint firstItem="CAz-RD-0ZT" firstAttribute="centerX" secondItem="GQN-No-gCL" secondAttribute="centerX" id="VzM-OL-0bV"/>
                             <constraint firstItem="HMU-Ep-PlT" firstAttribute="top" secondItem="Zc0-4l-I3L" secondAttribute="bottom" id="boX-10-NL7"/>
-                            <constraint firstItem="3k3-ou-xNr" firstAttribute="centerX" secondItem="GQN-No-gCL" secondAttribute="centerX" id="n0v-z4-XaG"/>
+                            <constraint firstItem="CAz-RD-0ZT" firstAttribute="leading" secondItem="GQN-No-gCL" secondAttribute="leading" constant="16" id="lgB-Sq-4uB"/>
+                            <constraint firstItem="3k3-ou-xNr" firstAttribute="centerX" secondItem="GQN-No-gCL" secondAttribute="centerX" id="wdK-hp-Ro7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Owz-wq-4xr">
@@ -1103,12 +1095,6 @@ Your widget has now been successfully added!</string>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="openSideBar:" destination="yZR-Uh-jZf" id="e52-2C-L0f"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Help" id="DDB-t5-ZvV">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="helpBTN:" destination="yZR-Uh-jZf" id="X0a-45-JsY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1194,16 +1180,16 @@ Your widget has now been successfully added!</string>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ury-VY-8Ed">
-                            <rect key="frame" x="5" y="36" width="278" height="90"/>
+                            <rect key="frame" x="5" y="33" width="278" height="94.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copy \()?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8D-uw-zZc">
-                                    <rect key="frame" x="102.5" y="0.0" width="73.5" height="21.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <rect key="frame" x="90.5" y="0.0" width="97.5" height="26.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgn-Tg-8CO">
-                                    <rect key="frame" x="124" y="22" width="30" height="34"/>
+                                    <rect key="frame" x="124" y="26.5" width="30" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <state key="normal" title="OK">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1213,7 +1199,7 @@ Your widget has now been successfully added!</string>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Jt-VF-ryN">
-                                    <rect key="frame" x="110" y="56" width="58" height="34"/>
+                                    <rect key="frame" x="110" y="60.5" width="58" height="34"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="Cancel">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1224,7 +1210,7 @@ Your widget has now been successfully added!</string>
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="89.5" id="kDd-g4-Mpw"/>
+                                <constraint firstAttribute="height" constant="94.5" id="Qpr-S9-tLM"/>
                                 <constraint firstAttribute="width" constant="278" id="txP-Wm-HjN"/>
                             </constraints>
                         </stackView>
@@ -1242,16 +1228,16 @@ Your widget has now been successfully added!</string>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="efB-OA-lqd">
-                            <rect key="frame" x="5.5" y="35" width="278" height="90"/>
+                            <rect key="frame" x="5" y="33" width="278" height="94.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save \()?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnP-nv-72z">
-                                    <rect key="frame" x="104" y="0.0" width="70.5" height="21.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <rect key="frame" x="92" y="0.0" width="94" height="26.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJx-7O-tUz">
-                                    <rect key="frame" x="124" y="22" width="30" height="34"/>
+                                    <rect key="frame" x="124" y="26.5" width="30" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <state key="normal" title="OK">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1262,7 +1248,7 @@ Your widget has now been successfully added!</string>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWX-TM-RLx">
-                                    <rect key="frame" x="110" y="56" width="58" height="34"/>
+                                    <rect key="frame" x="110" y="60.5" width="58" height="34"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="Cancel">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1274,7 +1260,7 @@ Your widget has now been successfully added!</string>
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="89.5" id="6zu-lz-Th6"/>
+                                <constraint firstAttribute="height" constant="94.5" id="2CM-rm-OVF"/>
                                 <constraint firstAttribute="width" constant="278" id="reA-Mn-yAI"/>
                             </constraints>
                         </stackView>
@@ -1313,30 +1299,22 @@ Your widget has now been successfully added!</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_back" translatesAutoresizingMaskIntoConstraints="NO" id="zFx-J8-qfH">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                             </imageView>
-                            <label opaque="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-273°C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGi-qd-2XG">
-                                <rect key="frame" x="16" y="203.5" width="288" height="161"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-273°C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGi-qd-2XG">
+                                <rect key="frame" x="40" y="164" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="161" id="sBI-QP-Fiw"/>
+                                    <constraint firstAttribute="width" secondItem="VGi-qd-2XG" secondAttribute="height" multiplier="1:1" id="83d-Ym-GXK"/>
+                                    <constraint firstAttribute="height" constant="240" id="lPW-QP-YdI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
-                                <color key="textColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="TiP-pb-K9f" appends="YES" id="A6d-nY-2dh"/>
                                     <outletCollection property="gestureRecognizers" destination="Eeq-Ta-sb0" appends="YES" id="d8g-Vu-bqq"/>
                                 </connections>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="is9-LU-jdE">
-                                <rect key="frame" x="93" y="64" width="134" height="30"/>
-                                <state key="normal" title="Change Conversion">
-                                    <color key="titleColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeConversion:" destination="QH1-eP-9My" eventType="touchUpInside" id="bDk-91-Tve"/>
-                                </connections>
-                            </button>
-                            <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wml-AD-xaa">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wml-AD-xaa">
                                 <rect key="frame" x="0.0" y="352" width="320" height="216"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -1344,23 +1322,32 @@ Your widget has now been successfully added!</string>
                                     <outlet property="delegate" destination="QH1-eP-9My" id="IVU-p5-a0y"/>
                                 </connections>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="is9-LU-jdE">
+                                <rect key="frame" x="16" y="64" width="142" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Change Conversion">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeConversion:" destination="QH1-eP-9My" eventType="touchUpInside" id="bDk-91-Tve"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zFx-J8-qfH" firstAttribute="leading" secondItem="wWN-1g-LhW" secondAttribute="leadingMargin" constant="-20" id="0HS-yB-7jl"/>
                             <constraint firstItem="zFx-J8-qfH" firstAttribute="centerY" secondItem="wWN-1g-LhW" secondAttribute="centerY" id="1E6-HA-Wpy"/>
-                            <constraint firstItem="VGi-qd-2XG" firstAttribute="centerY" secondItem="wWN-1g-LhW" secondAttribute="centerY" id="9Fh-cX-4E0"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="is9-LU-jdE" secondAttribute="trailing" constant="20" symbolic="YES" id="8rb-BG-Hgm"/>
                             <constraint firstItem="Wml-AD-xaa" firstAttribute="centerX" secondItem="wWN-1g-LhW" secondAttribute="centerX" id="Blk-5i-p1d"/>
                             <constraint firstItem="twX-6M-5QE" firstAttribute="top" secondItem="Wml-AD-xaa" secondAttribute="bottom" id="EF5-HK-1Gq"/>
+                            <constraint firstItem="is9-LU-jdE" firstAttribute="leading" secondItem="wWN-1g-LhW" secondAttribute="leading" constant="16" id="EhZ-a7-cMF"/>
+                            <constraint firstItem="VGi-qd-2XG" firstAttribute="centerY" secondItem="wWN-1g-LhW" secondAttribute="centerY" id="Mll-Be-bEb"/>
                             <constraint firstItem="twX-6M-5QE" firstAttribute="top" secondItem="zFx-J8-qfH" secondAttribute="bottom" id="UTd-4B-Ln4"/>
                             <constraint firstItem="is9-LU-jdE" firstAttribute="top" secondItem="L5i-X7-6ub" secondAttribute="bottom" id="VvY-ri-7Kv"/>
-                            <constraint firstItem="VGi-qd-2XG" firstAttribute="centerX" secondItem="wWN-1g-LhW" secondAttribute="centerX" id="W5h-5g-hx3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VGi-qd-2XG" secondAttribute="trailing" id="YlS-sm-yiO"/>
                             <constraint firstItem="zFx-J8-qfH" firstAttribute="height" secondItem="wWN-1g-LhW" secondAttribute="height" id="dp1-16-3JA"/>
                             <constraint firstItem="zFx-J8-qfH" firstAttribute="centerX" secondItem="wWN-1g-LhW" secondAttribute="centerX" id="fUn-Ma-X0J"/>
                             <constraint firstItem="Wml-AD-xaa" firstAttribute="width" secondItem="wWN-1g-LhW" secondAttribute="width" id="mK8-Ja-tT6"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="VGi-qd-2XG" secondAttribute="leading" id="nIP-V5-wYz"/>
-                            <constraint firstItem="is9-LU-jdE" firstAttribute="centerX" secondItem="wWN-1g-LhW" secondAttribute="centerX" id="olg-fL-K1X"/>
+                            <constraint firstItem="VGi-qd-2XG" firstAttribute="centerX" secondItem="wWN-1g-LhW" secondAttribute="centerX" id="n7y-xI-FEF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zFx-J8-qfH" secondAttribute="trailing" constant="-20" id="qNV-Wg-O3x"/>
                         </constraints>
                     </view>
@@ -1369,12 +1356,6 @@ Your widget has now been successfully added!</string>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="openSideBar:" destination="QH1-eP-9My" id="sp4-6S-IaV"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Help" id="8Ja-U4-l6H">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="helpBTN:" destination="QH1-eP-9My" id="eSu-I7-Nhf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1460,16 +1441,16 @@ Your widget has now been successfully added!</string>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="R2v-rS-iuh">
-                            <rect key="frame" x="5" y="36" width="278" height="90"/>
+                            <rect key="frame" x="5" y="33" width="278" height="94.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copy \()?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRV-DP-xb8">
-                                    <rect key="frame" x="102.5" y="0.0" width="73.5" height="21.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <rect key="frame" x="90.5" y="0.0" width="97.5" height="26.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vz7-p0-xgR">
-                                    <rect key="frame" x="124" y="22" width="30" height="34"/>
+                                    <rect key="frame" x="124" y="26.5" width="30" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <state key="normal" title="OK">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1479,7 +1460,7 @@ Your widget has now been successfully added!</string>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VX0-qZ-yWW">
-                                    <rect key="frame" x="110" y="56" width="58" height="34"/>
+                                    <rect key="frame" x="110" y="60.5" width="58" height="34"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="Cancel">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1490,7 +1471,7 @@ Your widget has now been successfully added!</string>
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="89.5" id="esP-Qx-3yQ"/>
+                                <constraint firstAttribute="height" constant="94.5" id="sZE-Ub-cOP"/>
                                 <constraint firstAttribute="width" constant="278" id="uaC-dh-eYg"/>
                             </constraints>
                         </stackView>
@@ -1508,16 +1489,16 @@ Your widget has now been successfully added!</string>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qhj-xw-H9a">
-                            <rect key="frame" x="5.5" y="35" width="278" height="90"/>
+                            <rect key="frame" x="5" y="33" width="278" height="94.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save \()?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hi-rR-f4E">
-                                    <rect key="frame" x="104" y="0.0" width="70.5" height="21.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <rect key="frame" x="92" y="0.0" width="94" height="26.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2js-gQ-tHM">
-                                    <rect key="frame" x="124" y="22" width="30" height="34"/>
+                                    <rect key="frame" x="124" y="26.5" width="30" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <state key="normal" title="OK">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1528,7 +1509,7 @@ Your widget has now been successfully added!</string>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuC-04-zjq">
-                                    <rect key="frame" x="110" y="56" width="58" height="34"/>
+                                    <rect key="frame" x="110" y="60.5" width="58" height="34"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="Cancel">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1541,7 +1522,7 @@ Your widget has now been successfully added!</string>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="width" constant="278" id="CEM-8d-3vq"/>
-                                <constraint firstAttribute="height" constant="89.5" id="G3F-Xi-qvz"/>
+                                <constraint firstAttribute="height" constant="94.5" id="eWy-iL-jXM"/>
                             </constraints>
                         </stackView>
                     </subviews>
@@ -1568,7 +1549,7 @@ Your widget has now been successfully added!</string>
         <scene sceneID="YuP-Z5-Htx">
             <objects>
                 <tableViewController storyboardIdentifier="aboutTBV" id="imG-hr-MEH" customClass="AboutTableViewController" customModule="Temperature" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="G52-sj-aJQ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="G52-sj-aJQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -1694,12 +1675,11 @@ Build 8</string>
                 <navigationController storyboardIdentifier="cToFNav" automaticallyAdjustsScrollViewInsets="NO" id="8hp-sJ-Ksc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ThB-Ou-f8a">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="VBq-Wk-xec">
-                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
@@ -1790,7 +1770,7 @@ Enjoy using TempConv!</string>
                 <navigationController storyboardIdentifier="fToCNav" automaticallyAdjustsScrollViewInsets="NO" id="B49-Vm-y1a" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="naG-Qw-dYk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1808,7 +1788,7 @@ Enjoy using TempConv!</string>
                 <navigationController storyboardIdentifier="cToKNav" automaticallyAdjustsScrollViewInsets="NO" id="pPx-L7-emM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WnG-j4-XmZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1826,7 +1806,7 @@ Enjoy using TempConv!</string>
                 <navigationController storyboardIdentifier="fToKNav" automaticallyAdjustsScrollViewInsets="NO" id="kos-aK-jxC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VHs-pE-loW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1844,7 +1824,7 @@ Enjoy using TempConv!</string>
                 <navigationController storyboardIdentifier="kToCNav" automaticallyAdjustsScrollViewInsets="NO" id="vvW-9i-hCq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ek8-2b-GV1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1871,30 +1851,22 @@ Enjoy using TempConv!</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_back" translatesAutoresizingMaskIntoConstraints="NO" id="WwR-1c-IJX">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                             </imageView>
-                            <label opaque="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-459°F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLR-LE-dKv">
-                                <rect key="frame" x="16" y="203.5" width="288" height="161"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-459°F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLR-LE-dKv">
+                                <rect key="frame" x="40" y="164" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="161" id="8pk-f8-dgB"/>
+                                    <constraint firstAttribute="height" constant="240" id="56j-7g-MVR"/>
+                                    <constraint firstAttribute="width" secondItem="iLR-LE-dKv" secondAttribute="height" multiplier="1:1" id="6Ii-h2-I6d"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
-                                <color key="textColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="MSW-BR-NrL" appends="YES" id="CRp-59-LUI"/>
                                     <outletCollection property="gestureRecognizers" destination="8kA-2x-0YG" appends="YES" id="dpk-bO-cMJ"/>
                                 </connections>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzi-G2-HvY">
-                                <rect key="frame" x="93" y="64" width="134" height="30"/>
-                                <state key="normal" title="Change Conversion">
-                                    <color key="titleColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="chageConversion:" destination="hb2-x8-cGc" eventType="touchUpInside" id="2Tt-Ja-mng"/>
-                                </connections>
-                            </button>
-                            <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOx-Bv-F8U">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOx-Bv-F8U">
                                 <rect key="frame" x="0.0" y="352" width="320" height="216"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -1902,24 +1874,33 @@ Enjoy using TempConv!</string>
                                     <outlet property="delegate" destination="hb2-x8-cGc" id="hQH-o8-6b2"/>
                                 </connections>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzi-G2-HvY">
+                                <rect key="frame" x="16" y="64" width="142" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Change Conversion">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chageConversion:" destination="hb2-x8-cGc" eventType="touchUpInside" id="2Tt-Ja-mng"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="iLR-LE-dKv" firstAttribute="centerX" secondItem="Dow-JI-n8u" secondAttribute="centerX" id="0Lg-4R-cee"/>
                             <constraint firstItem="xOx-Bv-F8U" firstAttribute="centerX" secondItem="Dow-JI-n8u" secondAttribute="centerX" id="84Q-eI-fEA"/>
                             <constraint firstItem="pzi-G2-HvY" firstAttribute="top" secondItem="Lhg-wo-wlh" secondAttribute="bottom" id="8wZ-XD-lE2"/>
+                            <constraint firstItem="iLR-LE-dKv" firstAttribute="centerY" secondItem="Dow-JI-n8u" secondAttribute="centerY" id="C4U-Z0-Pj0"/>
                             <constraint firstItem="xOx-Bv-F8U" firstAttribute="width" secondItem="Dow-JI-n8u" secondAttribute="width" id="GZQ-tc-Uy3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WwR-1c-IJX" secondAttribute="trailing" constant="-20" id="I5m-Tj-Q3Z"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pzi-G2-HvY" secondAttribute="trailing" constant="20" symbolic="YES" id="Kkn-HA-kXU"/>
                             <constraint firstItem="WwR-1c-IJX" firstAttribute="leading" secondItem="Dow-JI-n8u" secondAttribute="leadingMargin" constant="-20" id="LJ0-gq-ANO"/>
                             <constraint firstItem="WwR-1c-IJX" firstAttribute="centerX" secondItem="Dow-JI-n8u" secondAttribute="centerX" id="SYG-1U-iyY"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="iLR-LE-dKv" secondAttribute="leading" id="SiX-ji-lnY"/>
-                            <constraint firstItem="iLR-LE-dKv" firstAttribute="centerX" secondItem="Dow-JI-n8u" secondAttribute="centerX" id="VHP-di-D0f"/>
                             <constraint firstItem="WwR-1c-IJX" firstAttribute="height" secondItem="Dow-JI-n8u" secondAttribute="height" id="Vy8-93-Wjc"/>
                             <constraint firstItem="WwR-1c-IJX" firstAttribute="centerY" secondItem="Dow-JI-n8u" secondAttribute="centerY" id="acq-Aw-qZk"/>
                             <constraint firstItem="EOt-k7-Ujg" firstAttribute="top" secondItem="WwR-1c-IJX" secondAttribute="bottom" id="bf3-WA-irN"/>
                             <constraint firstItem="EOt-k7-Ujg" firstAttribute="top" secondItem="xOx-Bv-F8U" secondAttribute="bottom" id="bjb-nu-TPn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="iLR-LE-dKv" secondAttribute="trailing" id="kbz-Z8-psr"/>
-                            <constraint firstItem="pzi-G2-HvY" firstAttribute="centerX" secondItem="Dow-JI-n8u" secondAttribute="centerX" id="lGV-2y-T2F"/>
-                            <constraint firstItem="iLR-LE-dKv" firstAttribute="centerY" secondItem="Dow-JI-n8u" secondAttribute="centerY" id="pRK-5e-vKs"/>
+                            <constraint firstItem="pzi-G2-HvY" firstAttribute="leading" secondItem="Dow-JI-n8u" secondAttribute="leading" constant="16" id="ukX-A0-roS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j5L-5X-KyO">
@@ -1927,12 +1908,6 @@ Enjoy using TempConv!</string>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="openSideBar:" destination="hb2-x8-cGc" id="zxR-Qp-p62"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Help" id="gBy-Pf-cnm">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="helpBTN:" destination="hb2-x8-cGc" id="xWX-Sz-Urw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -2018,16 +1993,16 @@ Enjoy using TempConv!</string>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ive-dh-q9d">
-                            <rect key="frame" x="5" y="36" width="278" height="90"/>
+                            <rect key="frame" x="5" y="33" width="278" height="94.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copy \()?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sv-Qh-b0p">
-                                    <rect key="frame" x="102.5" y="0.0" width="73.5" height="21.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <rect key="frame" x="90.5" y="0.0" width="97.5" height="26.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAR-9T-w80">
-                                    <rect key="frame" x="124" y="22" width="30" height="34"/>
+                                    <rect key="frame" x="124" y="26.5" width="30" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <state key="normal" title="OK">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2038,7 +2013,7 @@ Enjoy using TempConv!</string>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IqQ-5r-xod">
-                                    <rect key="frame" x="110" y="56" width="58" height="34"/>
+                                    <rect key="frame" x="110" y="60.5" width="58" height="34"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="Cancel">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2050,7 +2025,7 @@ Enjoy using TempConv!</string>
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="89.5" id="83y-l6-Qa3"/>
+                                <constraint firstAttribute="height" constant="94.5" id="LJe-l6-omA"/>
                                 <constraint firstAttribute="width" constant="278" id="eTS-QS-SC5"/>
                             </constraints>
                         </stackView>
@@ -2068,16 +2043,16 @@ Enjoy using TempConv!</string>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RgR-Wy-dTe">
-                            <rect key="frame" x="5.5" y="35" width="278" height="90"/>
+                            <rect key="frame" x="5" y="33" width="278" height="94.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save \()?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GId-xl-5O5">
-                                    <rect key="frame" x="104" y="0.0" width="70.5" height="21.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <rect key="frame" x="92" y="0.0" width="94" height="26.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCk-AU-jYp">
-                                    <rect key="frame" x="124" y="22" width="30" height="34"/>
+                                    <rect key="frame" x="124" y="26.5" width="30" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <state key="normal" title="OK">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2088,7 +2063,7 @@ Enjoy using TempConv!</string>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUM-aU-OZe">
-                                    <rect key="frame" x="110" y="56" width="58" height="34"/>
+                                    <rect key="frame" x="110" y="60.5" width="58" height="34"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="Cancel">
                                         <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2101,7 +2076,7 @@ Enjoy using TempConv!</string>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="width" constant="278" id="BPU-6q-efF"/>
-                                <constraint firstAttribute="height" constant="89.5" id="BUU-CK-skp"/>
+                                <constraint firstAttribute="height" constant="94.5" id="N9E-Ge-e9L"/>
                             </constraints>
                         </stackView>
                     </subviews>
@@ -2130,7 +2105,7 @@ Enjoy using TempConv!</string>
                 <navigationController storyboardIdentifier="kToFNav" automaticallyAdjustsScrollViewInsets="NO" id="cUx-yx-ybx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bNu-xk-Twm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2146,7 +2121,7 @@ Enjoy using TempConv!</string>
         <scene sceneID="Ylb-SU-C3m">
             <objects>
                 <tableViewController storyboardIdentifier="settingsTBV" id="1HU-p1-qH1" customClass="SettingsTableViewController" customModule="Temperature" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="gya-vs-Suq">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="gya-vs-Suq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -2163,7 +2138,7 @@ Enjoy using TempConv!</string>
         <scene sceneID="h4G-IM-jA9">
             <objects>
                 <tableViewController storyboardIdentifier="moreFromTheDeveloper" id="EP6-AN-HEX" customClass="DeveloperTableViewController" customModule="Temperature" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="lji-76-hqr">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="lji-76-hqr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -2193,7 +2168,7 @@ Enjoy using TempConv!</string>
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bJH-G6-fLW" id="b2k-nA-qbk">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ht-VM-cF9">
@@ -2218,6 +2193,8 @@ Enjoy using TempConv!</string>
                                     <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="Xbr-XK-CBp" firstAttribute="centerY" secondItem="b2k-nA-qbk" secondAttribute="centerY" id="4KL-Jn-Hm5"/>
+                                        <constraint firstItem="4ht-VM-cF9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="b2k-nA-qbk" secondAttribute="leadingMargin" id="6ja-bk-PfE"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BLr-OE-8I5" secondAttribute="trailingMargin" id="AX8-zn-qgE"/>
                                         <constraint firstItem="BLr-OE-8I5" firstAttribute="centerY" secondItem="b2k-nA-qbk" secondAttribute="centerY" id="GAt-Mf-Zce"/>
                                         <constraint firstItem="Xbr-XK-CBp" firstAttribute="centerX" secondItem="b2k-nA-qbk" secondAttribute="centerX" id="Ome-Zh-9f4"/>
                                         <constraint firstItem="4ht-VM-cF9" firstAttribute="centerY" secondItem="b2k-nA-qbk" secondAttribute="centerY" id="bGn-pY-h8h"/>
@@ -2249,7 +2226,7 @@ Enjoy using TempConv!</string>
                 <navigationController storyboardIdentifier="nextGenGetShush" automaticallyAdjustsScrollViewInsets="NO" id="kAW-Cy-k1s" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tfC-LA-Cl3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2267,7 +2244,7 @@ Enjoy using TempConv!</string>
                 <navigationController storyboardIdentifier="saveNav" automaticallyAdjustsScrollViewInsets="NO" id="1aS-mf-RSo" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ASy-0r-VgO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2284,7 +2261,7 @@ Enjoy using TempConv!</string>
                             <rect key="frame" x="5.5" y="35" width="278" height="90"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save \()?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABa-YU-jWj">
-                                    <rect key="frame" x="104" y="0.0" width="70.5" height="21.5"/>
+                                    <rect key="frame" x="103.5" y="0.0" width="71" height="21.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>

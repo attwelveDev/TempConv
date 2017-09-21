@@ -33,7 +33,7 @@ class ActualAboutViewController: UIViewController, SFSafariViewControllerDelegat
 
         self.navigationItem.title = "About"
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
         textViewLooks.layer.cornerRadius = 5.0
         textViewLooks.clipsToBounds = true

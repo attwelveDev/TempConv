@@ -18,7 +18,7 @@ class WidgetHelpViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         self.navigationItem.title = "Add Widget"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.view.backgroundColor = UIColor.cyan
         

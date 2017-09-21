@@ -18,7 +18,7 @@ class HelpViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
 
         self.navigationItem.title = "Help"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.view.backgroundColor = UIColor.cyan
         

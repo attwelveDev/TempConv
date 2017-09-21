@@ -17,7 +17,7 @@ import UIKit
 class SideBar: NSObject, SideBarTableViewControllerDelegate {
 
     let barWidth: CGFloat = 150.0
-    let sideBarTableViewTopInset: CGFloat = 64.0
+    let sideBarTableViewTopInset: CGFloat = 90.0
     let sideBarContainerView: UIView = UIView()
     let sideBarTableViewController: SideBarViewControllerTableViewController = SideBarViewControllerTableViewController()
     var originView: UIView!
@@ -75,7 +75,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         
     }
     
-    func handleSwipe(_ recgnizer: UISwipeGestureRecognizer) {
+    @objc func handleSwipe(_ recgnizer: UISwipeGestureRecognizer) {
         if recgnizer.direction == UISwipeGestureRecognizerDirection.left {
             showSideBar(false)
             delegate?.sideBarWillClose?()

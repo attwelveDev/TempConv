@@ -265,7 +265,7 @@ class SettingsTableViewController: UITableViewController {
         // Do any additional setup after loading the view.
         
         self.navigationItem.title = "Settings"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         let backgroundImage = UIImage(named: "gradient_back")
