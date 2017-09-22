@@ -203,28 +203,42 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
     }
     
     func animateIn2() {
-        self.view.addSubview(mailErrorView)
-        mailErrorView.center = self.view.center
+        self.tableView.isScrollEnabled = false
         
-        mailErrorView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        if !UIAccessibilityIsReduceTransparencyEnabled() {
+            blurEffectView.frame = self.view.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            
+            self.view.addSubview(blurEffectView)
+            blurEffectView.alpha = 0
+        }
+        
+        self.view.addSubview(self.mailErrorView)
+        mailErrorView.center = exactCenter
+        
+        mailErrorView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
         mailErrorView.alpha = 0
         
-        UIView.animate(withDuration: 0.5) {
-            self.visualEffectView?.effect = self.effect
+        UIView.animate(withDuration: 0.2) {
+            
+            self.blurEffectView.alpha = 1
+            self.blurEffectView.transform = CGAffineTransform.identity
+            
             self.mailErrorView.alpha = 1
             self.mailErrorView.transform = CGAffineTransform.identity
         }
     }
-    
     func animateOut2() {
-        UIView.animate(withDuration: 0.5, animations: {
-            self.mailErrorView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        self.tableView.isScrollEnabled = true
+        
+        UIView.animate(withDuration: 0.2, animations: {
+            self.mailErrorView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
             self.mailErrorView.alpha = 0
+            self.blurEffectView.alpha = 0
             
-            self.visualEffectView?.effect = nil
-            
-        }) { (success: Bool) in
+        }){(success: Bool) in
             self.mailErrorView.removeFromSuperview()
+            self.blurEffectView.removeFromSuperview()
         }
     }
     
@@ -232,7 +246,8 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
         animateOut2()
     }
     
-    var effect: UIVisualEffect!
+    let exactCenter: CGPoint = CGPoint(x: UIScreen.main.bounds.size.width * 0.5,y: UIScreen.main.bounds.size.height * 0.5)
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -252,9 +267,6 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
         
         tableContent.delegate = self
         tableContent.dataSource = self
-        
-        effect = visualEffectView?.effect
-        visualEffectView?.effect = nil
         
         versionView.layer.cornerRadius = 5
         let clearColour = UIColor(white: 1, alpha: 0.5)
@@ -285,30 +297,46 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
         // Dispose of any resources that can be recreated.
     }
     
-    var visualEffectView: UIVisualEffectView!
+    let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.regular))
+    
     func animateIn() {
-        self.view.addSubview(versionView)
-        versionView.center = self.view.center
+        self.tableView.isScrollEnabled = false
         
-        versionView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        if !UIAccessibilityIsReduceTransparencyEnabled() {
+            blurEffectView.frame = self.view.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            
+            self.view.addSubview(blurEffectView)
+            blurEffectView.alpha = 0
+        }
+        
+        self.view.addSubview(self.versionView)
+        
+        versionView.center = exactCenter
+        
+        versionView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
         versionView.alpha = 0
         
-        UIView.animate(withDuration: 0.4) {
-            self.visualEffectView?.effect = self.effect
+        UIView.animate(withDuration: 0.2) {
+            
+            self.blurEffectView.alpha = 1
+            self.blurEffectView.transform = CGAffineTransform.identity
+            
             self.versionView.alpha = 1
             self.versionView.transform = CGAffineTransform.identity
         }
     }
-    
     func animateOut() {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.versionView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        self.tableView.isScrollEnabled = true
+        
+        UIView.animate(withDuration: 0.2, animations: {
+            self.versionView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
             self.versionView.alpha = 0
+            self.blurEffectView.alpha = 0
             
-            self.visualEffectView?.effect = nil
-            
-        }) { (success: Bool) in
+        }){(success: Bool) in
             self.versionView.removeFromSuperview()
+            self.blurEffectView.removeFromSuperview()
         }
     }
     

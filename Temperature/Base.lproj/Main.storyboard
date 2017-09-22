@@ -486,7 +486,7 @@ Your widget has now been successfully added!</string>
                         <constraint firstItem="XYZ-Cg-1aa" firstAttribute="centerY" secondItem="IdC-k0-2BS" secondAttribute="centerY" id="lLD-zf-lJo"/>
                     </constraints>
                 </view>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.75" id="55X-OI-pph">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1" id="55X-OI-pph">
                     <connections>
                         <action selector="longPressed:" destination="BYZ-38-t0r" id="7cN-jd-4ev"/>
                     </connections>
@@ -747,7 +747,7 @@ Your widget has now been successfully added!</string>
                         <constraint firstItem="iuO-Ab-VYz" firstAttribute="centerX" secondItem="due-FW-bls" secondAttribute="centerX" id="t5F-53-nXO"/>
                     </constraints>
                 </view>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.75" id="FKU-Cm-sod">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1" id="FKU-Cm-sod">
                     <connections>
                         <action selector="longPressed:" destination="dhi-e5-LOY" id="Dfr-e3-Rhd"/>
                     </connections>
@@ -1010,7 +1010,7 @@ Your widget has now been successfully added!</string>
                         <constraint firstItem="77k-8C-1t1" firstAttribute="centerX" secondItem="DDH-dv-V2y" secondAttribute="centerX" id="w7M-QW-scw"/>
                     </constraints>
                 </view>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.75" id="leX-nk-jxu">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1" id="leX-nk-jxu">
                     <connections>
                         <action selector="longPressed:" destination="cva-zi-lPD" id="LOf-WL-Rw0"/>
                     </connections>
@@ -1271,7 +1271,7 @@ Your widget has now been successfully added!</string>
                         <constraint firstItem="efB-OA-lqd" firstAttribute="centerY" secondItem="oQr-6w-R6x" secondAttribute="centerY" id="pel-nv-sF5"/>
                     </constraints>
                 </view>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.75" id="UNr-Ih-Bzz">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1" id="UNr-Ih-Bzz">
                     <connections>
                         <action selector="longPressed:" destination="yZR-Uh-jZf" id="06D-du-SPU"/>
                     </connections>
@@ -1532,7 +1532,7 @@ Your widget has now been successfully added!</string>
                         <constraint firstItem="qhj-xw-H9a" firstAttribute="centerY" secondItem="Fod-89-mtE" secondAttribute="centerY" id="Zvf-k1-yMs"/>
                     </constraints>
                 </view>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.75" id="TiP-pb-K9f">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1" id="TiP-pb-K9f">
                     <connections>
                         <action selector="longPressed:" destination="QH1-eP-9My" id="dbA-qc-vdv"/>
                     </connections>
@@ -1585,7 +1585,7 @@ Your widget has now been successfully added!</string>
                                 <action selector="dismissView:" destination="imG-hr-MEH" eventType="touchUpInside" id="d8b-8R-cVh"/>
                             </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boldTempConvLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ssQ-JG-5bz">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roundnewlogo" translatesAutoresizingMaskIntoConstraints="NO" id="ssQ-JG-5bz">
                             <rect key="frame" x="88" y="10" width="118" height="57"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3i-Ub-pLi">
@@ -2304,8 +2304,8 @@ Enjoy using TempConv!</string>
         </scene>
     </scenes>
     <resources>
-        <image name="boldTempConvLogo" width="1128" height="1125"/>
         <image name="gradient_back" width="388" height="690"/>
+        <image name="roundnewlogo" width="689" height="591"/>
         <image name="sidebar_icon" width="25" height="25"/>
     </resources>
 </document>

@@ -48,7 +48,7 @@ class AboutViewController: UIViewController, SFSafariViewControllerDelegate, Sid
         redirectLinkLooks.layer.cornerRadius = 5.0
         redirectLinkLooks.clipsToBounds = true
         
-        sideBar = SideBar(sourceView: self.view, menuItems: ["From C°", "From F°", "From K", "Saved", "Add Widget", "More"])
+        sideBar = SideBar(sourceView: self.view, menuItems: ["From C°", "From F°", "From K", "Help", "Saved", "Add Widget", "More"])
         sideBar.delegate = self
     }
 
@@ -112,12 +112,20 @@ class AboutViewController: UIViewController, SFSafariViewControllerDelegate, Sid
         } else if index == 3 {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let ivc = storyboard.instantiateViewController(withIdentifier: "save")
+            let ivc = storyboard.instantiateViewController(withIdentifier: "1")
             ivc.modalPresentationStyle = .custom
             ivc.modalTransitionStyle = .crossDissolve
             self.navigationController?.pushViewController(ivc, animated: true)
             
         } else if index == 4 {
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let ivc = storyboard.instantiateViewController(withIdentifier: "save")
+            ivc.modalPresentationStyle = .custom
+            ivc.modalTransitionStyle = .crossDissolve
+            self.navigationController?.pushViewController(ivc, animated: true)
+            
+        } else if index == 5 {
             
             let vcName = identity4
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -126,7 +134,7 @@ class AboutViewController: UIViewController, SFSafariViewControllerDelegate, Sid
             ivc.modalTransitionStyle = .crossDissolve
             self.navigationController?.pushViewController(ivc, animated: true)
 
-        } else if index == 5 {
+        } else if index == 6 {
             
             let vcName = identity
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

@@ -50,15 +50,16 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             
             self.view.addSubview(blurEffectView)
+            blurEffectView.alpha = 0
         }
         
         self.view.addSubview(self.conversionView)
-        self.conversionView.center = self.view.center
+        conversionView.center = self.view.center
         
-        self.conversionView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
-        self.conversionView.alpha = 0
+        conversionView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
+        conversionView.alpha = 0
         
-        UIView.animate(withDuration: 0.4) {
+        UIView.animate(withDuration: 0.2) {
             
             self.blurEffectView.alpha = 1
             self.blurEffectView.transform = CGAffineTransform.identity
@@ -68,14 +69,15 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
         }
     }
     func animateOut() {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.conversionView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        
+        UIView.animate(withDuration: 0.2, animations: {
+            self.conversionView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
             self.conversionView.alpha = 0
-
-            self.blurEffectView.removeFromSuperview()
+            self.blurEffectView.alpha = 0
             
         }){(success: Bool) in
             self.conversionView.removeFromSuperview()
+            self.blurEffectView.removeFromSuperview()
         }
     }
     
@@ -85,15 +87,16 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             
             self.view.addSubview(blurEffectView)
+            blurEffectView.alpha = 0
         }
         
         self.view.addSubview(copyView)
         copyView.center = self.view.center
         
-        copyView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        copyView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
         copyView.alpha = 0
         
-        UIView.animate(withDuration: 0.4) {
+        UIView.animate(withDuration: 0.2) {
             
             self.blurEffectView.alpha = 1
             self.blurEffectView.transform = CGAffineTransform.identity
@@ -104,13 +107,13 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
     }
     func animateOut1() {
         
-        UIView.animate(withDuration: 0.3, animations: {
-            self.copyView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        UIView.animate(withDuration: 0.2, animations: {
+            self.copyView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
             self.copyView.alpha = 0
-            
-            self.blurEffectView.removeFromSuperview()
+            self.blurEffectView.alpha = 0
             
         }){(success: Bool) in
+            self.blurEffectView.removeFromSuperview()
             self.copyView.removeFromSuperview()
         }
     }
@@ -121,15 +124,16 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             
             self.view.addSubview(blurEffectView)
+            blurEffectView.alpha = 0
         }
         
         self.view.addSubview(saveView)
         saveView.center = self.view.center
         
-        saveView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        saveView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
         saveView.alpha = 0
         
-        UIView.animate(withDuration: 0.4) {
+        UIView.animate(withDuration: 0.2) {
             self.blurEffectView.alpha = 1
             self.blurEffectView.transform = CGAffineTransform.identity
             
@@ -138,13 +142,13 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
         }
     }
     func animateOut2() {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.saveView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        UIView.animate(withDuration: 0.2, animations: {
+            self.saveView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
             self.saveView.alpha = 0
-            
-            self.blurEffectView.removeFromSuperview()
-            
+            self.blurEffectView.alpha = 0
+
         }){(success: Bool) in
+            self.blurEffectView.removeFromSuperview()
             self.saveView.removeFromSuperview()
         }
     }
@@ -234,7 +238,6 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
         // Do any additional setup after loading the view, typically from a nib.
         
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

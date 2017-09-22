@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol  SideBarTableViewControllerDelegate {
+protocol SideBarTableViewControllerDelegate {
     func sideBarControlDidSelectRow(_ indexPath: IndexPath)
 }
 
@@ -40,7 +40,7 @@ class SideBarViewControllerTableViewController: UITableViewController {
 
         // Configure the cell...
         
-        if cell == nil{
+        if cell == nil {
             cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
             cell!.backgroundColor = UIColor.clear
             cell!.textLabel?.textColor = UIColor.white
