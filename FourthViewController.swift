@@ -55,6 +55,8 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, SideBarDeleg
         
         UIView.animate(withDuration: 0.2) {
             
+            self.navigationController?.navigationBar.alpha = 0.000001
+            
             self.blurEffectView.alpha = 1
             self.blurEffectView.transform = CGAffineTransform.identity
             
@@ -69,7 +71,10 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, SideBarDeleg
             self.conversionView.alpha = 0
             self.blurEffectView.alpha = 0
             
+            self.navigationController?.navigationBar.alpha = 1
+            
         }){(success: Bool) in
+            
             self.conversionView.removeFromSuperview()
             self.blurEffectView.removeFromSuperview()
         }
@@ -92,6 +97,8 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, SideBarDeleg
         
         UIView.animate(withDuration: 0.2) {
             
+            self.navigationController?.navigationBar.alpha = 0.000001
+            
             self.blurEffectView.alpha = 1
             self.blurEffectView.transform = CGAffineTransform.identity
             
@@ -105,6 +112,8 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, SideBarDeleg
             self.copyView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
             self.copyView.alpha = 0
             self.blurEffectView.alpha = 0
+            
+            self.navigationController?.navigationBar.alpha = 1
             
         }){(success: Bool) in
             self.blurEffectView.removeFromSuperview()
@@ -128,6 +137,9 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, SideBarDeleg
         saveView.alpha = 0
         
         UIView.animate(withDuration: 0.2) {
+            
+            self.navigationController?.navigationBar.alpha = 0.000001
+            
             self.blurEffectView.alpha = 1
             self.blurEffectView.transform = CGAffineTransform.identity
             
@@ -140,6 +152,8 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, SideBarDeleg
             self.saveView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
             self.saveView.alpha = 0
             self.blurEffectView.alpha = 0
+            
+            self.navigationController?.navigationBar.alpha = 1
             
         }){(success: Bool) in
             self.blurEffectView.removeFromSuperview()
@@ -231,6 +245,7 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, SideBarDeleg
         let copyable = tempLabel.text!
         okLabel.setTitleColor(UIColor(red: 30/255.0, green: 175/255.0, blue: 249/255.0, alpha: 1.0), for: UIControlState.normal)
         okLabel.setTitle("OK",for: .normal)
+        okLabel.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         okLabel.isUserInteractionEnabled = true
         copyLabel.isHidden = false
         cancelLabel.isHidden = false
@@ -259,6 +274,7 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, SideBarDeleg
         cancelLabel.isHidden = true
         okLabel.setTitleColor(UIColor.green, for: UIControlState.normal)
         okLabel.setTitle("Success", for: .normal)
+        okLabel.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
         okLabel.isUserInteractionEnabled = false
         let delayInSeconds = 2.0
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
@@ -285,6 +301,7 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, SideBarDeleg
         let from = "\(tempPicker.selectedRow(inComponent: 0) + -150)°F"
         okLabel1.setTitleColor(UIColor(red: 30/255.0, green: 175/255.0, blue: 249/255.0, alpha: 1.0), for: UIControlState.normal)
         okLabel1.setTitle("OK",for: .normal)
+        okLabel1.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         okLabel1.isUserInteractionEnabled = true
         saveLabel.isHidden = false
         cancelLabel1.isHidden = false
@@ -317,6 +334,7 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, SideBarDeleg
         cancelLabel1.isHidden = true
         okLabel1.setTitleColor(UIColor.green, for: UIControlState.normal)
         okLabel1.setTitle("Success", for: .normal)
+        okLabel1.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
         okLabel1.isUserInteractionEnabled = false
         let delayInSeconds = 2.0
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {

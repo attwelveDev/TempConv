@@ -221,6 +221,8 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
         
         UIView.animate(withDuration: 0.2) {
             
+            self.navigationController?.navigationBar.alpha = 0.000001
+            
             self.blurEffectView.alpha = 1
             self.blurEffectView.transform = CGAffineTransform.identity
             
@@ -235,6 +237,8 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
             self.mailErrorView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
             self.mailErrorView.alpha = 0
             self.blurEffectView.alpha = 0
+            
+            self.navigationController?.navigationBar.alpha = 1
             
         }){(success: Bool) in
             self.mailErrorView.removeFromSuperview()
@@ -319,6 +323,8 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
         
         UIView.animate(withDuration: 0.2) {
             
+            self.navigationController?.navigationBar.alpha = 0.000001
+            
             self.blurEffectView.alpha = 1
             self.blurEffectView.transform = CGAffineTransform.identity
             
@@ -333,6 +339,8 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
             self.versionView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
             self.versionView.alpha = 0
             self.blurEffectView.alpha = 0
+            
+            self.navigationController?.navigationBar.alpha = 1
             
         }){(success: Bool) in
             self.versionView.removeFromSuperview()
