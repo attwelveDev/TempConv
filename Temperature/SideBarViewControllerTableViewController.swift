@@ -23,6 +23,7 @@ class SideBarViewControllerTableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.tableView = UITableView(frame: self.tableView.frame, style: .grouped)
+        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

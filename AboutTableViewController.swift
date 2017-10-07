@@ -177,9 +177,15 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
     @IBOutlet weak var okBTN: UIButton!
     
     func configuredMailComposeViewController() -> MFMailComposeViewController {
-        UINavigationBar.appearance().barTintColor = UIColor(red: 0.00, green: 0.42, blue: 0.98, alpha: 1.0)
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        UINavigationBar.appearance().tintColor = UIColor.white
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
+        } else {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
+        }
+        
+        navigationController?.navigationBar.tintColor = UIColor.white
         
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         
@@ -250,7 +256,7 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
         animateOut2()
     }
     
-    let exactCenter: CGPoint = CGPoint(x: UIScreen.main.bounds.size.width * 0.5,y: UIScreen.main.bounds.size.height * 0.5)
+    let exactCenter: CGPoint = CGPoint(x: UIScreen.main.bounds.size.width * 0.5, y: UIScreen.main.bounds.size.height * 0.5)
     
     override func viewDidLoad() {
         
@@ -259,8 +265,14 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
         // Do any additional setup after loading the view.
         
         self.navigationItem.title = "More"
-        navigationController?.navigationBar.barTintColor = UIColor(red:0.00, green:0.42, blue:0.98, alpha:1.0)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
+        } else {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
+        }
+        
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         let backgroundImage = UIImage(named: "gradient_back")
@@ -272,22 +284,22 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
         tableContent.delegate = self
         tableContent.dataSource = self
         
-        versionView.layer.cornerRadius = 5
+        versionView.layer.cornerRadius = 10.0
         let clearColour = UIColor(white: 1, alpha: 0.5)
         versionView.backgroundColor = clearColour
         
-        versionInfoLooks.layer.cornerRadius = 5.0
+        versionInfoLooks.layer.cornerRadius = 10.0
         versionInfoLooks.clipsToBounds = true
-        dismissBTNLooks.layer.cornerRadius = 5.0
+        dismissBTNLooks.layer.cornerRadius = 10.0
         dismissBTNLooks.clipsToBounds = true
         
-        mailErrorView.layer.cornerRadius = 5.0
+        mailErrorView.layer.cornerRadius = 10.0
         mailErrorView.clipsToBounds = true
-        cannotLBL.layer.cornerRadius = 5.0
+        cannotLBL.layer.cornerRadius = 10.0
         cannotLBL.clipsToBounds = true
-        pleaseLBL.layer.cornerRadius = 5.0
+        pleaseLBL.layer.cornerRadius = 10.0
         pleaseLBL.clipsToBounds = true
-        okBTN.layer.cornerRadius = 5.0
+        okBTN.layer.cornerRadius = 10.0
         okBTN.clipsToBounds = true
         
         var preferredStatusBarStyle: UIStatusBarStyle {

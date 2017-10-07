@@ -32,6 +32,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
     
     init(sourceView: UIView, menuItems: Array<String>){
         super.init()
+        
         originView = sourceView
         sideBarTableViewController.tableData = menuItems
         

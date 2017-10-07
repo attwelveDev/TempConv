@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		040850501D9CCD110066A76C /* UnitConverter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408504F1D9CCD110066A76C /* UnitConverter2.swift */; };
 		040850521D9CEC110066A76C /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040850511D9CEC110066A76C /* FourthViewController.swift */; };
-		045168471DAB5AF500BF23F2 /* WidgetHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045168461DAB5AF500BF23F2 /* WidgetHelpViewController.swift */; };
 		0458C6D51DF5378A00AB2991 /* FahrenheitToKelvinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458C6D41DF5378A00AB2991 /* FahrenheitToKelvinViewController.swift */; };
 		0458C6D71DF539E700AB2991 /* TemperatureRange4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458C6D61DF539E700AB2991 /* TemperatureRange4.swift */; };
 		0458C6D91DF53ACB00AB2991 /* fToKUnitConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458C6D81DF53ACB00AB2991 /* fToKUnitConverter.swift */; };
@@ -44,11 +43,18 @@
 		049040281D9A0D0600D5A1FC /* TemperatureRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049040271D9A0D0600D5A1FC /* TemperatureRange.swift */; };
 		0490402A1D9A0DEE00D5A1FC /* UnitConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049040291D9A0DEE00D5A1FC /* UnitConverter.swift */; };
 		0495F4851DF41AA800E22569 /* CelsiusToKelvinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495F4841DF41AA800E22569 /* CelsiusToKelvinViewController.swift */; };
-		049D8C0E1D9E1C1D004CC057 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D8C0D1D9E1C1D004CC057 /* HelpViewController.swift */; };
 		049D8C101D9E2A81004CC057 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D8C0F1D9E2A81004CC057 /* AboutViewController.swift */; };
 		04A5A3DB1E1F2082000BE689 /* DeveloperTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5A3DA1E1F2082000BE689 /* DeveloperTableViewController.swift */; };
 		04AB04621DA5047B005BE468 /* ActualAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB04611DA5047B005BE468 /* ActualAboutViewController.swift */; };
 		04DED7311DA20C100058463E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049040001D99FBF100D5A1FC /* Assets.xcassets */; };
+		931442941F84F5C50031344F /* HelpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931442931F84F5C50031344F /* HelpPageViewController.swift */; };
+		93DCE2771F85B8C2008DC6B8 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCE2761F85B8C2008DC6B8 /* WelcomePageViewController.swift */; };
+		93DCE2791F85B8E2008DC6B8 /* ConvertPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCE2781F85B8E2008DC6B8 /* ConvertPageViewController.swift */; };
+		93DCE27B1F85B8FD008DC6B8 /* ChangePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCE27A1F85B8FD008DC6B8 /* ChangePageViewController.swift */; };
+		93DCE27D1F85B909008DC6B8 /* CopyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCE27C1F85B909008DC6B8 /* CopyPageViewController.swift */; };
+		93DCE27F1F85B916008DC6B8 /* SavePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCE27E1F85B916008DC6B8 /* SavePageViewController.swift */; };
+		93DCE2811F85B952008DC6B8 /* AccessPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCE2801F85B952008DC6B8 /* AccessPageViewController.swift */; };
+		93DCE2831F85B96B008DC6B8 /* EnjoyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCE2821F85B96B008DC6B8 /* EnjoyPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +116,6 @@
 /* Begin PBXFileReference section */
 		0408504F1D9CCD110066A76C /* UnitConverter2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnitConverter2.swift; path = ../UnitConverter2.swift; sourceTree = "<group>"; };
 		040850511D9CEC110066A76C /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FourthViewController.swift; path = ../FourthViewController.swift; sourceTree = "<group>"; };
-		045168461DAB5AF500BF23F2 /* WidgetHelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetHelpViewController.swift; sourceTree = "<group>"; };
 		0458C6D41DF5378A00AB2991 /* FahrenheitToKelvinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FahrenheitToKelvinViewController.swift; sourceTree = "<group>"; };
 		0458C6D61DF539E700AB2991 /* TemperatureRange4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureRange4.swift; sourceTree = "<group>"; };
 		0458C6D81DF53ACB00AB2991 /* fToKUnitConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fToKUnitConverter.swift; sourceTree = "<group>"; };
@@ -154,10 +159,17 @@
 		0492B76B1E078AB80062303D /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
 		0492B76C1E078AB80062303D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		0495F4841DF41AA800E22569 /* CelsiusToKelvinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CelsiusToKelvinViewController.swift; sourceTree = "<group>"; };
-		049D8C0D1D9E1C1D004CC057 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpViewController.swift; path = ../HelpViewController.swift; sourceTree = "<group>"; };
 		049D8C0F1D9E2A81004CC057 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutViewController.swift; path = ../AboutViewController.swift; sourceTree = "<group>"; };
 		04A5A3DA1E1F2082000BE689 /* DeveloperTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperTableViewController.swift; sourceTree = "<group>"; };
 		04AB04611DA5047B005BE468 /* ActualAboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActualAboutViewController.swift; sourceTree = "<group>"; };
+		931442931F84F5C50031344F /* HelpPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpPageViewController.swift; sourceTree = "<group>"; };
+		93DCE2761F85B8C2008DC6B8 /* WelcomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
+		93DCE2781F85B8E2008DC6B8 /* ConvertPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertPageViewController.swift; sourceTree = "<group>"; };
+		93DCE27A1F85B8FD008DC6B8 /* ChangePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePageViewController.swift; sourceTree = "<group>"; };
+		93DCE27C1F85B909008DC6B8 /* CopyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyPageViewController.swift; sourceTree = "<group>"; };
+		93DCE27E1F85B916008DC6B8 /* SavePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePageViewController.swift; sourceTree = "<group>"; };
+		93DCE2801F85B952008DC6B8 /* AccessPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessPageViewController.swift; sourceTree = "<group>"; };
+		93DCE2821F85B96B008DC6B8 /* EnjoyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnjoyPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,8 +241,14 @@
 		043B7C7C1DF4C20B00CDA904 /* Tutorials */ = {
 			isa = PBXGroup;
 			children = (
-				045168461DAB5AF500BF23F2 /* WidgetHelpViewController.swift */,
-				049D8C0D1D9E1C1D004CC057 /* HelpViewController.swift */,
+				931442931F84F5C50031344F /* HelpPageViewController.swift */,
+				93DCE2761F85B8C2008DC6B8 /* WelcomePageViewController.swift */,
+				93DCE2781F85B8E2008DC6B8 /* ConvertPageViewController.swift */,
+				93DCE27A1F85B8FD008DC6B8 /* ChangePageViewController.swift */,
+				93DCE27C1F85B909008DC6B8 /* CopyPageViewController.swift */,
+				93DCE27E1F85B916008DC6B8 /* SavePageViewController.swift */,
+				93DCE2801F85B952008DC6B8 /* AccessPageViewController.swift */,
+				93DCE2821F85B96B008DC6B8 /* EnjoyPageViewController.swift */,
 			);
 			name = Tutorials;
 			sourceTree = "<group>";
@@ -572,31 +590,37 @@
 				0458C6DF1DF571D300AB2991 /* kToCUnitConverter.swift in Sources */,
 				04A5A3DB1E1F2082000BE689 /* DeveloperTableViewController.swift in Sources */,
 				048615501DF60C9E001093FD /* kToFUnitConverter.swift in Sources */,
+				93DCE27F1F85B916008DC6B8 /* SavePageViewController.swift in Sources */,
 				04903FFC1D99FBF100D5A1FC /* FirstViewController.swift in Sources */,
 				040850521D9CEC110066A76C /* FourthViewController.swift in Sources */,
+				93DCE27B1F85B8FD008DC6B8 /* ChangePageViewController.swift in Sources */,
+				93DCE2771F85B8C2008DC6B8 /* WelcomePageViewController.swift in Sources */,
 				0458C6D71DF539E700AB2991 /* TemperatureRange4.swift in Sources */,
 				04AB04621DA5047B005BE468 /* ActualAboutViewController.swift in Sources */,
 				04903FFA1D99FBF100D5A1FC /* AppDelegate.swift in Sources */,
 				049D8C101D9E2A81004CC057 /* AboutViewController.swift in Sources */,
-				049D8C0E1D9E1C1D004CC057 /* HelpViewController.swift in Sources */,
 				045FC4F31F3E9DB300CA76C8 /* SavingTableViewController.swift in Sources */,
+				93DCE2831F85B96B008DC6B8 /* EnjoyPageViewController.swift in Sources */,
+				931442941F84F5C50031344F /* HelpPageViewController.swift in Sources */,
 				0490402A1D9A0DEE00D5A1FC /* UnitConverter.swift in Sources */,
 				0486154C1DF602BA001093FD /* KelvinToFahrenheitViewController.swift in Sources */,
 				0495F4851DF41AA800E22569 /* CelsiusToKelvinViewController.swift in Sources */,
+				93DCE2811F85B952008DC6B8 /* AccessPageViewController.swift in Sources */,
 				0458C6D91DF53ACB00AB2991 /* fToKUnitConverter.swift in Sources */,
 				047F89471DA4950D000FA6ED /* SideBar.swift in Sources */,
 				049040281D9A0D0600D5A1FC /* TemperatureRange.swift in Sources */,
 				047F89451DA48FEC000FA6ED /* SideBarViewControllerTableViewController.swift in Sources */,
 				048F510A1DFBBE53000FB1E0 /* SettingsTableViewController.swift in Sources */,
 				0486154E1DF60C16001093FD /* TemperatureRange6.swift in Sources */,
+				93DCE2791F85B8E2008DC6B8 /* ConvertPageViewController.swift in Sources */,
 				0458C6DD1DF5710D00AB2991 /* TemperatureRange5.swift in Sources */,
 				0458C6D51DF5378A00AB2991 /* FahrenheitToKelvinViewController.swift in Sources */,
 				040850501D9CCD110066A76C /* UnitConverter2.swift in Sources */,
+				93DCE27D1F85B909008DC6B8 /* CopyPageViewController.swift in Sources */,
 				04855C3A1DF4B11D003F1EA9 /* cToKUnitConverter.swift in Sources */,
 				048438F31DB6015200DCCDF3 /* AboutTableViewController.swift in Sources */,
 				0458C6DB1DF568EF00AB2991 /* KelvinToCelsiusViewController.swift in Sources */,
 				047B271D1DA0A7B400BFD464 /* TemperatureRange2.swift in Sources */,
-				045168471DAB5AF500BF23F2 /* WidgetHelpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

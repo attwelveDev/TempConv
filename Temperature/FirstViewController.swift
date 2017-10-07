@@ -17,7 +17,6 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
     var identity2 = "2"
     var identity3 = "Fahrenheit"
     var identity4 = "About"
-    var identity5 = "WidgetHelp"
     var identity6 = "aboutTBV"
     var identity7 = "cToK"
     var identity8 = "kToC"
@@ -43,7 +42,6 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
     }
     
     let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.regular))
-    var exitButton = UIButton()
     
     func animateIn() {
         if !UIAccessibilityIsReduceTransparencyEnabled() {
@@ -61,7 +59,7 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
         conversionView.alpha = 0
         
         UIView.animate(withDuration: 0.2) {
-
+            
             self.navigationController?.navigationBar.alpha = 0.000001
             
             self.blurEffectView.alpha = 1
@@ -159,7 +157,7 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
             self.saveView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
             self.saveView.alpha = 0
             self.blurEffectView.alpha = 0
-
+            
             self.navigationController?.navigationBar.alpha = 1
             
         }){(success: Bool) in
@@ -167,25 +165,21 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
             self.saveView.removeFromSuperview()
         }
     }
-
+    
     @IBAction func cToK(_ sender: Any) {
-        tempLabel.isHidden = false
         animateOut()
         let vcName = identity7
         let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
         self.navigationController?.pushViewController(viewController!, animated: false)
     }
+    
     @IBOutlet var tempRange: TemperatureRange!
     @IBOutlet weak var tempPicker: UIPickerView!
     @IBOutlet weak var tempLabel: UILabel!
     
     @IBAction func reverse(_ sender: Any) {
         animateOut()
-        let delayInSeconds = 0.3
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
-            self.tempLabel.isHidden = false
-            self.reverseInstansiation()
-        }
+        reverseInstansiation()
     }
     
     func reverseInstansiation () {
@@ -230,26 +224,27 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        HelpPageViewController.isFirstTimeThroughTutorial = false
+        
         self.navigationItem.title = "C° to F°"
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
-            navigationController!.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
         } else {
             self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
         }
-        
+
         tempLabel.layer.cornerRadius = tempLabel.frame.height / 2
         tempLabel.clipsToBounds = true
         
-        conversionView.layer.cornerRadius = 5.0
-        copyView.layer.cornerRadius = 5.0
-        saveView.layer.cornerRadius = 5.0
+        conversionView.layer.cornerRadius = 10.0
+        copyView.layer.cornerRadius = 10.0
+        saveView.layer.cornerRadius = 10.0
     navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
-        exitButton = UIButton(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
-        
-        sideBar = SideBar(sourceView: self.view, menuItems: ["From F°", "From K", "Help", "Saved", "Learn", "Add Widget", "More"])
+        sideBar = SideBar(sourceView: self.view, menuItems: ["From F°", "From K", "Help", "Saved", "Learn", "More"])
         sideBar.delegate = self
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -332,13 +327,17 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
             self.autoDismissView()
         }
     }
-    func autoDismissView() {
+    @objc func autoDismissView() {
+
         tempLabel.isHidden = false
         longPress.isEnabled = true
+        doubleTap.isEnabled = true
         tempLabel.isUserInteractionEnabled = true
         changeConversion.isUserInteractionEnabled = true
         tempPicker.isUserInteractionEnabled = true
+        animateOut()
         animateOut1()
+        animateOut2()
     }
     
     // save mechanics
@@ -389,17 +388,9 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
         okLabel1.isUserInteractionEnabled = false
         let delayInSeconds = 2.0
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
-            self.autoDismissView1()
+            self.autoDismissView()
         }
         
-    }
-    func autoDismissView1() {
-        tempLabel.isHidden = false
-        doubleTap.isEnabled = true
-        tempLabel.isUserInteractionEnabled = true
-        changeConversion.isUserInteractionEnabled = true
-        tempPicker.isUserInteractionEnabled = true
-        animateOut2()
     }
 
     // sidebar
@@ -424,7 +415,7 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
         } else if index == 2 {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let ivc = storyboard.instantiateViewController(withIdentifier: "1")
+            let ivc = storyboard.instantiateViewController(withIdentifier: "helpFake")
             ivc.modalPresentationStyle = .custom
             ivc.modalTransitionStyle = .crossDissolve
             self.navigationController?.pushViewController(ivc, animated: true)
@@ -446,14 +437,6 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
             self.navigationController?.pushViewController(ivc, animated: true)
             
         } else if index == 5 {
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let ivc = storyboard.instantiateViewController(withIdentifier: identity5)
-            ivc.modalPresentationStyle = .custom
-            ivc.modalTransitionStyle = .crossDissolve
-            self.navigationController?.pushViewController(ivc, animated: true)
-
-        } else if index == 6 {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let ivc = storyboard.instantiateViewController(withIdentifier: identity6)

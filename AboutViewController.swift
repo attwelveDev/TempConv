@@ -36,26 +36,34 @@ class AboutViewController: UIViewController, SFSafariViewControllerDelegate, Sid
         // Do any additional setup after loading the view.
         
         self.navigationItem.title = "Learn"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
+        } else {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
+        }
+        
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.view.backgroundColor = UIColor.cyan
         
         self.automaticallyAdjustsScrollViewInsets = false
         
-        textView.layer.cornerRadius = 5.0
+        textView.layer.cornerRadius = 10.0
         textView.clipsToBounds = true
         
-        redirectLinkLooks.layer.cornerRadius = 5.0
+        redirectLinkLooks.layer.cornerRadius = redirectLinkLooks.frame.height / 2
         redirectLinkLooks.clipsToBounds = true
         
-        sideBar = SideBar(sourceView: self.view, menuItems: ["From C°", "From F°", "From K", "Help", "Saved", "Add Widget", "More"])
+        sideBar = SideBar(sourceView: self.view, menuItems: ["From C°", "From F°", "From K", "Help", "Saved", "More"])
         sideBar.delegate = self
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     var delegate: SideBarDelegate?
     
@@ -79,7 +87,6 @@ class AboutViewController: UIViewController, SFSafariViewControllerDelegate, Sid
         let identity = "aboutTBV"
         let identity2 = "3"
         let identity3 = "Fahrenheit"
-        let identity4 = "WidgetHelp"
         let identity5 = "kToC"
         
         if index == 0 {
@@ -112,7 +119,7 @@ class AboutViewController: UIViewController, SFSafariViewControllerDelegate, Sid
         } else if index == 3 {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let ivc = storyboard.instantiateViewController(withIdentifier: "1")
+            let ivc = storyboard.instantiateViewController(withIdentifier: "helpFake")
             ivc.modalPresentationStyle = .custom
             ivc.modalTransitionStyle = .crossDissolve
             self.navigationController?.pushViewController(ivc, animated: true)
@@ -126,15 +133,6 @@ class AboutViewController: UIViewController, SFSafariViewControllerDelegate, Sid
             self.navigationController?.pushViewController(ivc, animated: true)
             
         } else if index == 5 {
-            
-            let vcName = identity4
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let ivc = storyboard.instantiateViewController(withIdentifier: vcName)
-            ivc.modalPresentationStyle = .custom
-            ivc.modalTransitionStyle = .crossDissolve
-            self.navigationController?.pushViewController(ivc, animated: true)
-
-        } else if index == 6 {
             
             let vcName = identity
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

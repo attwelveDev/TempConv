@@ -92,9 +92,15 @@ class DeveloperTableViewController: UITableViewController {
         
         // Do any additional setup after loading the view.
         
-        self.navigationItem.title = "More from the Developer"
-        navigationController?.navigationBar.barTintColor = UIColor(red:0.00, green:0.42, blue:0.98, alpha:1.0)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        self.navigationItem.title = "More Apps"
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
+        } else {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
+        }
+        
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         let backgroundImage = UIImage(named: "gradient_back")

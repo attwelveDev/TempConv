@@ -15,7 +15,6 @@ class CelsiusToKelvinViewController: UIViewController, UIPickerViewDelegate, Sid
     var identity2 = "2"
     var identity3 = "Fahrenheit"
     var identity4 = "About"
-    var identity5 = "WidgetHelp"
     var identity6 = "aboutTBV"
     var identity7 = "3"
     var identity8 = "kToC"
@@ -163,7 +162,6 @@ class CelsiusToKelvinViewController: UIViewController, UIPickerViewDelegate, Sid
     }
     
     @IBAction func kToC(_ sender: Any) {
-        tempLabel.isHidden = false
         animateOut()
         let vcName = identity7
         let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
@@ -175,12 +173,7 @@ class CelsiusToKelvinViewController: UIViewController, UIPickerViewDelegate, Sid
     @IBOutlet weak var tempLabel: UILabel!
     @IBAction func reverse(_ sender: Any) {
         animateOut()
-        let delayInSeconds = 0.3
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
-            self.tempLabel.isHidden = false
-            self.reverseInstansiation()
-        }
-
+        reverseInstansiation()
     }
     
     func reverseInstansiation () {
@@ -229,7 +222,8 @@ class CelsiusToKelvinViewController: UIViewController, UIPickerViewDelegate, Sid
         self.navigationItem.title = "C° to K"
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
-            navigationController!.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
         } else {
             self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
         }
@@ -237,13 +231,13 @@ class CelsiusToKelvinViewController: UIViewController, UIPickerViewDelegate, Sid
         tempLabel.layer.cornerRadius = tempLabel.frame.height / 2
         tempLabel.clipsToBounds = true
         
-        conversionView.layer.cornerRadius = 5.0
-        copyView.layer.cornerRadius = 5.0
-        saveView.layer.cornerRadius = 5.0
+        conversionView.layer.cornerRadius = 10.0
+        copyView.layer.cornerRadius = 10.0
+        saveView.layer.cornerRadius = 10.0
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
-        sideBar = SideBar(sourceView: self.view, menuItems: ["From F°", "From K", "Help", "Saved", "Learn", "Add Widget", "More"])
+        sideBar = SideBar(sourceView: self.view, menuItems: ["From F°", "From K", "Help", "Saved", "Learn", "More"])
         sideBar.delegate = self
         
         
@@ -410,7 +404,7 @@ class CelsiusToKelvinViewController: UIViewController, UIPickerViewDelegate, Sid
         } else if index == 2 {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let ivc = storyboard.instantiateViewController(withIdentifier: "1")
+            let ivc = storyboard.instantiateViewController(withIdentifier: "helpFake")
             ivc.modalPresentationStyle = .custom
             ivc.modalTransitionStyle = .crossDissolve
             self.navigationController?.pushViewController(ivc, animated: true)
@@ -432,14 +426,6 @@ class CelsiusToKelvinViewController: UIViewController, UIPickerViewDelegate, Sid
             self.navigationController?.pushViewController(ivc, animated: true)
             
         } else if index == 5 {
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let ivc = storyboard.instantiateViewController(withIdentifier: identity5)
-            ivc.modalPresentationStyle = .custom
-            ivc.modalTransitionStyle = .crossDissolve
-            self.navigationController?.pushViewController(ivc, animated: true)
-            
-        } else if index == 6 {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let ivc = storyboard.instantiateViewController(withIdentifier: identity6)

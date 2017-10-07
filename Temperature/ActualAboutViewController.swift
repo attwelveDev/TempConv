@@ -32,15 +32,22 @@ class ActualAboutViewController: UIViewController, SFSafariViewControllerDelegat
         super.viewDidLoad()
 
         self.navigationItem.title = "About"
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
+        } else {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
+        }
         
-        textViewLooks.layer.cornerRadius = 5.0
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        textViewLooks.layer.cornerRadius = 10.0
         textViewLooks.clipsToBounds = true
         
-        redirectLinkLooks.layer.cornerRadius = 5.0
+        redirectLinkLooks.layer.cornerRadius = redirectLinkLooks.frame.height / 2
         redirectLinkLooks.clipsToBounds = true
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -48,8 +55,8 @@ class ActualAboutViewController: UIViewController, SFSafariViewControllerDelegat
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
+   
     /*
     // MARK: - Navigation
 

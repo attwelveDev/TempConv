@@ -38,33 +38,33 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             // Fallback on earlier versions
         }
         
-        looks1.layer.cornerRadius = 5.0
+        looks1.layer.cornerRadius = 10.0
         looks1.clipsToBounds = true
-        looks2.layer.cornerRadius = 5.0
+        looks2.layer.cornerRadius = 10.0
         looks2.clipsToBounds = true
-        looks3.layer.cornerRadius = 5.0
+        looks3.layer.cornerRadius = 10.0
         looks3.clipsToBounds = true
-        looks4.layer.cornerRadius = 5.0
+        looks4.layer.cornerRadius = 10.0
         looks4.clipsToBounds = true
-        looks5.layer.cornerRadius = 5.0
+        looks5.layer.cornerRadius = 10.0
         looks5.clipsToBounds = true
-        looks6.layer.cornerRadius = 5.0
+        looks6.layer.cornerRadius = 10.0
         looks6.clipsToBounds = true
-        looks7.layer.cornerRadius = 5.0
+        looks7.layer.cornerRadius = 10.0
         looks7.clipsToBounds = true
-        looks8.layer.cornerRadius = 5.0
+        looks8.layer.cornerRadius = 10.0
         looks8.clipsToBounds = true
-        looks9.layer.cornerRadius = 5.0
+        looks9.layer.cornerRadius = 10.0
         looks9.clipsToBounds = true
-        looks10.layer.cornerRadius = 5.0
+        looks10.layer.cornerRadius = 10.0
         looks10.clipsToBounds = true
-        looks11.layer.cornerRadius = 5.0
+        looks11.layer.cornerRadius = 10.0
         looks11.clipsToBounds = true
-        looks12.layer.cornerRadius = 5.0
+        looks12.layer.cornerRadius = 10.0
         looks12.clipsToBounds = true
-        looks13.layer.cornerRadius = 5.0
+        looks13.layer.cornerRadius = 10.0
         looks13.clipsToBounds = true
-        looks14.layer.cornerRadius = 5.0
+        looks14.layer.cornerRadius = 10.0
         looks14.clipsToBounds = true
         
     }
