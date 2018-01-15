@@ -230,22 +230,31 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
             navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
-        } else {
-            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
         }
-
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        
         tempLabel.layer.cornerRadius = tempLabel.frame.height / 2
         tempLabel.clipsToBounds = true
         
         conversionView.layer.cornerRadius = 10.0
         copyView.layer.cornerRadius = 10.0
         saveView.layer.cornerRadius = 10.0
-    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
-        sideBar = SideBar(sourceView: self.view, menuItems: ["From F°", "From K", "Help", "Saved", "Learn", "More"])
+        sideBar = SideBar(sourceView: self.view, menuItems: ["From F°", "From K", "Help", "TempSave", "Learn", "More"])
         sideBar.delegate = self
+        
+        leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(FirstViewController.handleSwipe))
+        leftSwipe.direction = .left
+        view.addGestureRecognizer(leftSwipe)
+        
+        leftSwipe.isEnabled = false
+        
+        rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(FirstViewController.handleSwipe))
+        rightSwipe.direction = .right
+        view.addGestureRecognizer(rightSwipe)
         
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -261,8 +270,26 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
         tempPicker.subviews[2].isHidden = true
     }
     
-    var delegate: SideBarDelegate?
+    var leftSwipe = UISwipeGestureRecognizer()
+    var rightSwipe = UISwipeGestureRecognizer()
     
+    @objc func handleSwipe() {
+        directionEnabling()
+        sideBarBool = !sideBarBool
+    }
+    
+    func directionEnabling() {
+        if sideBarBool == false {
+            rightSwipe.isEnabled = false
+            leftSwipe.isEnabled = true
+        } else {
+            rightSwipe.isEnabled = true
+            leftSwipe.isEnabled = false
+        }
+    }
+    
+    var delegate: SideBarDelegate?
+
     var sideBarBool: Bool = false {
         didSet {
             if sideBarBool == true {
@@ -274,12 +301,11 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
             }
         }
     }
-    
+
     @IBAction func openSideBar(_ sender: Any) {
+        directionEnabling()
         sideBarBool = !sideBarBool
     }
-
-  
     
     // copy mechanics
     
@@ -380,6 +406,8 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, SideBarDelega
         let defaults = UserDefaults.standard
         defaults.set(SavingTableViewController.from, forKey: "fromValues")
         defaults.set(SavingTableViewController.to, forKey: "toValues")
+        UserDefaults(suiteName: "group.com.Aaron-Nguyen.Temperature")?.set(defaults.object(forKey: "fromValues"), forKey: "fromValues")
+        UserDefaults(suiteName: "group.com.Aaron-Nguyen.Temperature")?.set(defaults.object(forKey: "toValues"), forKey: "toValues")
         saveLabel.isHidden = true
         cancelLabel1.isHidden = true
         okLabel1.setTitleColor(UIColor.green, for: UIControlState.normal)

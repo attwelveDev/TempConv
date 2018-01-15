@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8hp-sJ-Ksc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8hp-sJ-Ksc">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -44,11 +44,11 @@ About the developer
 About TempConv
 Started as an experiment into the iOS development world, and then continued developing into what is worthy to be on the App Store.
 
-TempConv (app) comes with TempStick (iMessages) and TempEst (widget). 
+TempConv (app) comes with TempStick (iMessage Stickers), TempEst (widget) and TempSave (widget). 
 
 Happy converting!                                                     </mutableString>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14.5"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWw-oA-rRA">
@@ -117,7 +117,7 @@ Celsius was developed in 1742 by Andres Celsius. Fahrenheit was developed in 172
 
 There are many other types of unit of temperature measurement including Rankine (R°) but is not used by this app due to the frequency of usage by the other three.                                                                                                  </string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14.5"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QxZ-kz-Goz">
@@ -235,10 +235,10 @@ There are many other types of unit of temperature measurement including Rankine 
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Q1R-p4-1Ff">
-                        <barButtonItem key="leftBarButtonItem" image="sidebar_icon" id="qSs-ZZ-wW4">
+                        <barButtonItem key="leftBarButtonItem" image="sidebar_icon" id="HNA-Kj-rnq">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <action selector="openSideBar:" destination="BYZ-38-t0r" id="IPh-Qg-0Fe"/>
+                                <action selector="openSideBar:" destination="BYZ-38-t0r" id="MBz-u3-yGy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1513,10 +1513,10 @@ There are many other types of unit of temperature measurement including Rankine 
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3i-Ub-pLi">
                             <rect key="frame" x="16" y="75" width="263" height="45"/>
-                            <string key="text">Version 6.43
-Build 9</string>
+                            <string key="text">TempConv's 10th Update
+Version 6.82 - Build 10</string>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -1992,10 +1992,47 @@ Build 9</string>
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="errorDescription" destination="sXF-Ev-3qe" id="dhA-0i-2nr"/>
+                        <outlet property="errorView" destination="1Xe-ak-jEM" id="c4M-NV-XkZ"/>
                         <outlet property="tableContent" destination="lji-76-hqr" id="l26-E6-4vY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TbI-f5-q2J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view alpha="0.75" contentMode="scaleToFill" id="1Xe-ak-jEM">
+                    <rect key="frame" x="0.0" y="0.0" width="295" height="170"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYc-uq-XdX">
+                            <rect key="frame" x="16" y="128" width="263" height="32"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                            <state key="normal" title="OK">
+                                <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="okAction:" destination="EP6-AN-HEX" eventType="touchUpInside" id="aNf-Rk-gKl"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="sXF-Ev-3qe">
+                            <rect key="frame" x="16" y="56" width="263" height="58"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="lYc-uq-XdX" firstAttribute="leading" secondItem="1Xe-ak-jEM" secondAttribute="leading" constant="16" id="0JK-Lf-HQr"/>
+                        <constraint firstItem="sXF-Ev-3qe" firstAttribute="leading" secondItem="1Xe-ak-jEM" secondAttribute="leading" constant="16" id="75R-rx-skD"/>
+                        <constraint firstItem="lYc-uq-XdX" firstAttribute="centerX" secondItem="1Xe-ak-jEM" secondAttribute="centerX" id="CH9-lh-31g"/>
+                        <constraint firstAttribute="trailing" secondItem="lYc-uq-XdX" secondAttribute="trailing" constant="16" id="E94-G0-zfE"/>
+                        <constraint firstItem="lYc-uq-XdX" firstAttribute="top" secondItem="1Xe-ak-jEM" secondAttribute="top" constant="128" id="EIA-xf-8yt"/>
+                        <constraint firstItem="sXF-Ev-3qe" firstAttribute="centerX" secondItem="1Xe-ak-jEM" secondAttribute="centerX" id="KJi-b9-A3Y"/>
+                        <constraint firstItem="sXF-Ev-3qe" firstAttribute="top" secondItem="1Xe-ak-jEM" secondAttribute="top" constant="56" id="W5n-YG-RSF"/>
+                        <constraint firstAttribute="trailing" secondItem="sXF-Ev-3qe" secondAttribute="trailing" constant="16" id="cNh-Vl-79e"/>
+                        <constraint firstAttribute="bottom" secondItem="lYc-uq-XdX" secondAttribute="bottom" constant="10" id="i4l-WZ-m2r"/>
+                        <constraint firstAttribute="bottom" secondItem="sXF-Ev-3qe" secondAttribute="bottom" constant="56" id="l6e-Id-nYI"/>
+                    </constraints>
+                </view>
             </objects>
             <point key="canvasLocation" x="2410" y="815"/>
         </scene>
@@ -2016,7 +2053,7 @@ Build 9</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ht-VM-cF9">
-                                            <rect key="frame" x="268" y="11" width="44" height="21"/>
+                                            <rect key="frame" x="260" y="11" width="44" height="21"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -2028,7 +2065,7 @@ Build 9</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLr-OE-8I5">
-                                            <rect key="frame" x="8" y="11" width="44" height="21"/>
+                                            <rect key="frame" x="16" y="11" width="44" height="21"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -2059,8 +2096,48 @@ Build 9</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="ooe-8m-vdI"/>
+                    <connections>
+                        <outlet property="zeroView" destination="T1C-uZ-tXg" id="W6U-tx-qId"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kd0-ei-kvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view alpha="0.75" contentMode="scaleToFill" id="T1C-uZ-tXg">
+                    <rect key="frame" x="0.0" y="0.0" width="295" height="170"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6p-ER-8Nt">
+                            <rect key="frame" x="16" y="128" width="263" height="32"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                            <state key="normal" title="OK">
+                                <color key="titleColor" red="0.0039937030520000001" green="0.68054473400000004" blue="0.98817080260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="okAction:" destination="DYv-py-DsU" eventType="touchUpInside" id="Bc3-z5-ELY"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cc2-dG-hsf">
+                            <rect key="frame" x="16" y="56" width="263" height="58"/>
+                            <string key="text">You have not saved 
+anything</string>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="cc2-dG-hsf" firstAttribute="leading" secondItem="T1C-uZ-tXg" secondAttribute="leading" constant="16" id="6CL-Ym-0oA"/>
+                        <constraint firstItem="s6p-ER-8Nt" firstAttribute="top" secondItem="T1C-uZ-tXg" secondAttribute="top" constant="128" id="7Vj-Mq-x4L"/>
+                        <constraint firstItem="cc2-dG-hsf" firstAttribute="centerX" secondItem="T1C-uZ-tXg" secondAttribute="centerX" id="JxS-Ya-z3i"/>
+                        <constraint firstItem="s6p-ER-8Nt" firstAttribute="leading" secondItem="T1C-uZ-tXg" secondAttribute="leading" constant="16" id="RHy-Oa-hPd"/>
+                        <constraint firstAttribute="bottom" secondItem="cc2-dG-hsf" secondAttribute="bottom" constant="56" id="YsJ-ud-VkI"/>
+                        <constraint firstItem="cc2-dG-hsf" firstAttribute="top" secondItem="T1C-uZ-tXg" secondAttribute="top" constant="56" id="Zmm-cz-xqX"/>
+                        <constraint firstAttribute="bottom" secondItem="s6p-ER-8Nt" secondAttribute="bottom" constant="10" id="ceN-cu-ZrN"/>
+                        <constraint firstItem="s6p-ER-8Nt" firstAttribute="centerX" secondItem="T1C-uZ-tXg" secondAttribute="centerX" id="d9n-h7-BOa"/>
+                        <constraint firstAttribute="trailing" secondItem="s6p-ER-8Nt" secondAttribute="trailing" constant="16" id="e7X-ic-hIw"/>
+                        <constraint firstAttribute="trailing" secondItem="cc2-dG-hsf" secondAttribute="trailing" constant="16" id="r1L-8r-HQ5"/>
+                    </constraints>
+                </view>
             </objects>
             <point key="canvasLocation" x="316" y="818"/>
         </scene>
@@ -2452,11 +2529,11 @@ Happy converting!                    </string>
                                     <action selector="doneAction:" destination="4Cb-DY-0E7" eventType="touchUpInside" id="NqE-vR-c5K"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roundnewlogo" translatesAutoresizingMaskIntoConstraints="NO" id="WEP-LS-IrU">
-                                <rect key="frame" x="70" y="194" width="180" height="180"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roundnewlogo" translatesAutoresizingMaskIntoConstraints="NO" id="WEP-LS-IrU">
+                                <rect key="frame" x="40" y="164" width="240" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="cxv-w0-8ij"/>
-                                    <constraint firstAttribute="height" constant="180" id="zvE-ry-46N"/>
+                                    <constraint firstAttribute="width" constant="240" id="cxv-w0-8ij"/>
+                                    <constraint firstAttribute="height" constant="240" id="zvE-ry-46N"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -2559,11 +2636,11 @@ Thank you for choosing TempConv!                     </string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roundnewlogo" translatesAutoresizingMaskIntoConstraints="NO" id="xkh-H9-vJn">
-                                <rect key="frame" x="70" y="194" width="180" height="180"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roundnewlogo" translatesAutoresizingMaskIntoConstraints="NO" id="xkh-H9-vJn">
+                                <rect key="frame" x="40" y="164" width="240" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="86Z-Aa-Oms"/>
-                                    <constraint firstAttribute="height" constant="180" id="G1Z-Ao-l87"/>
+                                    <constraint firstAttribute="width" constant="240" id="86Z-Aa-Oms"/>
+                                    <constraint firstAttribute="height" constant="240" id="G1Z-Ao-l87"/>
                                 </constraints>
                             </imageView>
                         </subviews>

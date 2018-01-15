@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,11 +25,11 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_back" translatesAutoresizingMaskIntoConstraints="NO" id="MBR-iO-jvg">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roundnewlogo" translatesAutoresizingMaskIntoConstraints="NO" id="JXd-BM-hjA">
-                                <rect key="frame" x="35" y="159" width="250" height="250"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roundnewlogo" translatesAutoresizingMaskIntoConstraints="NO" id="JXd-BM-hjA">
+                                <rect key="frame" x="40" y="164" width="240" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="F49-2H-1hH"/>
-                                    <constraint firstAttribute="width" constant="250" id="k7T-5z-Jub"/>
+                                    <constraint firstAttribute="height" constant="240" id="F49-2H-1hH"/>
+                                    <constraint firstAttribute="width" constant="240" id="k7T-5z-Jub"/>
                                 </constraints>
                             </imageView>
                         </subviews>

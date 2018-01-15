@@ -180,9 +180,6 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
             navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
-        } else {
-            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
         }
         
         navigationController?.navigationBar.tintColor = UIColor.white
@@ -209,8 +206,6 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
     }
     
     func animateIn2() {
-        self.tableView.isScrollEnabled = false
-        
         if !UIAccessibilityIsReduceTransparencyEnabled() {
             blurEffectView.frame = self.view.bounds
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -220,7 +215,7 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
         }
         
         self.view.addSubview(self.mailErrorView)
-        mailErrorView.center = exactCenter
+        mailErrorView.center = CGPoint(x: view.center.x , y: view.center.y - (navigationController?.navigationBar.frame.height)!)
         
         mailErrorView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
         mailErrorView.alpha = 0
@@ -237,8 +232,6 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
         }
     }
     func animateOut2() {
-        self.tableView.isScrollEnabled = true
-        
         UIView.animate(withDuration: 0.2, animations: {
             self.mailErrorView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
             self.mailErrorView.alpha = 0
@@ -255,9 +248,7 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
     @IBAction func dismissError(_ sender: Any) {
         animateOut2()
     }
-    
-    let exactCenter: CGPoint = CGPoint(x: UIScreen.main.bounds.size.width * 0.5, y: UIScreen.main.bounds.size.height * 0.5)
-    
+
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -268,10 +259,9 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
             navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
-        } else {
-            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
         }
+
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
@@ -305,6 +295,12 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
         var preferredStatusBarStyle: UIStatusBarStyle {
             return .lightContent
         }
+        
+        if tableContent.contentSize.height < tableContent.frame.size.height {
+            tableContent.isScrollEnabled = false
+        } else {
+            tableContent.isScrollEnabled = true
+        }
 
     }
     
@@ -316,8 +312,6 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
     let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.regular))
     
     func animateIn() {
-        self.tableView.isScrollEnabled = false
-        
         if !UIAccessibilityIsReduceTransparencyEnabled() {
             blurEffectView.frame = self.view.bounds
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -328,7 +322,7 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
         
         self.view.addSubview(self.versionView)
         
-        versionView.center = exactCenter
+        versionView.center = CGPoint(x: view.center.x , y: view.center.y - (navigationController?.navigationBar.frame.height)!)
         
         versionView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
         versionView.alpha = 0
@@ -345,8 +339,6 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
         }
     }
     func animateOut() {
-        self.tableView.isScrollEnabled = true
-        
         UIView.animate(withDuration: 0.2, animations: {
             self.versionView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
             self.versionView.alpha = 0

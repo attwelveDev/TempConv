@@ -139,7 +139,7 @@ class SettingsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         switch(section) {
-        case 0: return "Choose the conversion mode that the application will launch on by default. The '✓' after a conversion mode specifies the chosen one. The effects take place after you quit this application or after a period of time following the changes."
+        case 0: return "Choose the conversion mode that the application will launch on by default. The effects take place after you quit this application or after a period of time following the changes."
         default: fatalError("Unknown section")
         }
     }
@@ -268,10 +268,9 @@ class SettingsTableViewController: UITableViewController {
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
             navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
-        } else {
-            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
         }
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
@@ -283,6 +282,12 @@ class SettingsTableViewController: UITableViewController {
         
         tableContent.delegate = self
         tableContent.dataSource = self
+        
+        if tableContent.contentSize.height < tableContent.frame.size.height {
+            tableContent.isScrollEnabled = false
+        } else {
+            tableContent.isScrollEnabled = true
+        }
         
     }
     

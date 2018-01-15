@@ -18,6 +18,10 @@
 		045FC4F31F3E9DB300CA76C8 /* SavingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045FC4F21F3E9DB300CA76C8 /* SavingTableViewController.swift */; };
 		0471EB681DACA1E700523D5D /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0471EB671DACA1E700523D5D /* Stickers.xcassets */; };
 		0471EB6C1DACA1E700523D5D /* TempConvStickers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0471EB651DACA1E700523D5D /* TempConvStickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0478D508200B4E66000F1FB4 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047AC9B51DA200C200A0A280 /* NotificationCenter.framework */; };
+		0478D50B200B4E66000F1FB4 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478D50A200B4E66000F1FB4 /* TodayViewController.swift */; };
+		0478D50E200B4E66000F1FB4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478D50C200B4E66000F1FB4 /* MainInterface.storyboard */; };
+		0478D512200B4E66000F1FB4 /* TempSave.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0478D507200B4E66000F1FB4 /* TempSave.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		047AC9B61DA200C200A0A280 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047AC9B51DA200C200A0A280 /* NotificationCenter.framework */; };
 		047AC9B91DA200C200A0A280 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC9B81DA200C200A0A280 /* TodayViewController.swift */; };
 		047AC9BC1DA200C200A0A280 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047AC9BA1DA200C200A0A280 /* MainInterface.storyboard */; };
@@ -65,6 +69,13 @@
 			remoteGlobalIDString = 0471EB641DACA1E700523D5D;
 			remoteInfo = TempConvStickers;
 		};
+		0478D510200B4E66000F1FB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04903FEE1D99FBF100D5A1FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0478D506200B4E66000F1FB4;
+			remoteInfo = TempSave;
+		};
 		047AC9BE1DA200C200A0A280 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 04903FEE1D99FBF100D5A1FC /* Project object */;
@@ -106,6 +117,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				0471EB6C1DACA1E700523D5D /* TempConvStickers.appex in Embed App Extensions */,
+				0478D512200B4E66000F1FB4 /* TempSave.appex in Embed App Extensions */,
 				047AC9C01DA200C200A0A280 /* TemperatureWidget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -126,6 +138,12 @@
 		0471EB651DACA1E700523D5D /* TempConvStickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TempConvStickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0471EB671DACA1E700523D5D /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		0471EB691DACA1E700523D5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0478D507200B4E66000F1FB4 /* TempSave.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TempSave.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0478D50A200B4E66000F1FB4 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		0478D50D200B4E66000F1FB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		0478D50F200B4E66000F1FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0478D516200B5332000F1FB4 /* Temperature.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Temperature.entitlements; sourceTree = "<group>"; };
+		0478D517200B5340000F1FB4 /* TempSave.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TempSave.entitlements; sourceTree = "<group>"; };
 		047AC9B31DA200C200A0A280 /* TemperatureWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TemperatureWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		047AC9B51DA200C200A0A280 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		047AC9B81DA200C200A0A280 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +191,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0478D504200B4E66000F1FB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0478D508200B4E66000F1FB4 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		047AC9B01DA200C200A0A280 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,6 +306,17 @@
 			path = TempConvStickers;
 			sourceTree = "<group>";
 		};
+		0478D509200B4E66000F1FB4 /* TempSave */ = {
+			isa = PBXGroup;
+			children = (
+				0478D517200B5340000F1FB4 /* TempSave.entitlements */,
+				0478D50A200B4E66000F1FB4 /* TodayViewController.swift */,
+				0478D50C200B4E66000F1FB4 /* MainInterface.storyboard */,
+				0478D50F200B4E66000F1FB4 /* Info.plist */,
+			);
+			path = TempSave;
+			sourceTree = "<group>";
+		};
 		047AC9B41DA200C200A0A280 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +356,7 @@
 				049040181D99FBF100D5A1FC /* TemperatureUITests */,
 				047AC9B71DA200C200A0A280 /* TemperatureWidget */,
 				0471EB661DACA1E700523D5D /* TempConvStickers */,
+				0478D509200B4E66000F1FB4 /* TempSave */,
 				047AC9B41DA200C200A0A280 /* Frameworks */,
 				04903FF71D99FBF100D5A1FC /* Products */,
 			);
@@ -332,6 +370,7 @@
 				049040151D99FBF100D5A1FC /* TemperatureUITests.xctest */,
 				047AC9B31DA200C200A0A280 /* TemperatureWidget.appex */,
 				0471EB651DACA1E700523D5D /* TempConvStickers.appex */,
+				0478D507200B4E66000F1FB4 /* TempSave.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -339,6 +378,7 @@
 		04903FF81D99FBF100D5A1FC /* Temperature */ = {
 			isa = PBXGroup;
 			children = (
+				0478D516200B5332000F1FB4 /* Temperature.entitlements */,
 				04903FF91D99FBF100D5A1FC /* AppDelegate.swift */,
 				043B7C7A1DF4C18600CDA904 /* ConvertViewControllers */,
 				043B7C7B1DF4C1CB00CDA904 /* RangesAndFormulas */,
@@ -390,6 +430,23 @@
 			productReference = 0471EB651DACA1E700523D5D /* TempConvStickers.appex */;
 			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
 		};
+		0478D506200B4E66000F1FB4 /* TempSave */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0478D515200B4E66000F1FB4 /* Build configuration list for PBXNativeTarget "TempSave" */;
+			buildPhases = (
+				0478D503200B4E66000F1FB4 /* Sources */,
+				0478D504200B4E66000F1FB4 /* Frameworks */,
+				0478D505200B4E66000F1FB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TempSave;
+			productName = TempSave;
+			productReference = 0478D507200B4E66000F1FB4 /* TempSave.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		047AC9B21DA200C200A0A280 /* TemperatureWidget */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 047AC9C11DA200C200A0A280 /* Build configuration list for PBXNativeTarget "TemperatureWidget" */;
@@ -422,6 +479,7 @@
 			dependencies = (
 				047AC9BF1DA200C200A0A280 /* PBXTargetDependency */,
 				0471EB6B1DACA1E700523D5D /* PBXTargetDependency */,
+				0478D511200B4E66000F1FB4 /* PBXTargetDependency */,
 			);
 			name = Temperature;
 			productName = Temperature;
@@ -470,7 +528,7 @@
 		04903FEE1D99FBF100D5A1FC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Aaron Nguyen";
 				TargetAttributes = {
@@ -478,6 +536,16 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 8NBK23EYP2;
 						ProvisioningStyle = Automatic;
+					};
+					0478D506200B4E66000F1FB4 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = 8NBK23EYP2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					047AC9B21DA200C200A0A280 = {
 						CreatedOnToolsVersion = 8.0;
@@ -490,6 +558,11 @@
 						DevelopmentTeam = 8NBK23EYP2;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					049040091D99FBF100D5A1FC = {
 						CreatedOnToolsVersion = 8.0;
@@ -525,6 +598,7 @@
 				049040141D99FBF100D5A1FC /* TemperatureUITests */,
 				047AC9B21DA200C200A0A280 /* TemperatureWidget */,
 				0471EB641DACA1E700523D5D /* TempConvStickers */,
+				0478D506200B4E66000F1FB4 /* TempSave */,
 			);
 		};
 /* End PBXProject section */
@@ -535,6 +609,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0471EB681DACA1E700523D5D /* Stickers.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0478D505200B4E66000F1FB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0478D50E200B4E66000F1FB4 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +656,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0478D503200B4E66000F1FB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0478D50B200B4E66000F1FB4 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		047AC9AF1DA200C200A0A280 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -648,6 +738,11 @@
 			target = 0471EB641DACA1E700523D5D /* TempConvStickers */;
 			targetProxy = 0471EB6A1DACA1E700523D5D /* PBXContainerItemProxy */;
 		};
+		0478D511200B4E66000F1FB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0478D506200B4E66000F1FB4 /* TempSave */;
+			targetProxy = 0478D510200B4E66000F1FB4 /* PBXContainerItemProxy */;
+		};
 		047AC9BF1DA200C200A0A280 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 047AC9B21DA200C200A0A280 /* TemperatureWidget */;
@@ -666,6 +761,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0478D50C200B4E66000F1FB4 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0478D50D200B4E66000F1FB4 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		047AC9BA1DA200C200A0A280 /* MainInterface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -720,6 +823,52 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Aaron-Nguyen.Temperature.TempConvStickers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		0478D513200B4E66000F1FB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = TempSave/TempSave.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thinh Nguyen (TVDVVWA6WP)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8NBK23EYP2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TempSave/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Aaron-Nguyen.Temperature.TempSave";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0478D514200B4E66000F1FB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = TempSave/TempSave.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thinh Nguyen (TVDVVWA6WP)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8NBK23EYP2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TempSave/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Aaron-Nguyen.Temperature.TempSave";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -867,6 +1016,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Temperature/Temperature.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Thinh Nguyen (TVDVVWA6WP)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8NBK23EYP2;
@@ -885,6 +1035,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Temperature/Temperature.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Thinh Nguyen (TVDVVWA6WP)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8NBK23EYP2;
@@ -972,6 +1123,15 @@
 			buildConfigurations = (
 				0471EB6D1DACA1E700523D5D /* Debug */,
 				0471EB6E1DACA1E700523D5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0478D515200B4E66000F1FB4 /* Build configuration list for PBXNativeTarget "TempSave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0478D513200B4E66000F1FB4 /* Debug */,
+				0478D514200B4E66000F1FB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

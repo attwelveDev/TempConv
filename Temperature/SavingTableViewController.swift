@@ -22,14 +22,21 @@ class SavingTableViewController: UITableViewController {
 
     let defaults = UserDefaults.standard
     
+    @IBOutlet var zeroView: UIView!
+    
+    @IBAction func okAction(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+        self.navigationController?.navigationBar.alpha = 1
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         SavingTableViewController.from = defaults.stringArray(forKey: "fromValues") ?? [String]()
         SavingTableViewController.to = defaults.stringArray(forKey: "toValues") ?? [String]()
         
-        print(SavingTableViewController.from)
-        print(SavingTableViewController.to)
+        UserDefaults(suiteName: "group.com.Aaron-Nguyen.Temperature")?.set(defaults.object(forKey: "fromValues"), forKey: "fromValues")
+        UserDefaults(suiteName: "group.com.Aaron-Nguyen.Temperature")?.set(defaults.object(forKey: "toValues"), forKey: "toValues")
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -37,14 +44,13 @@ class SavingTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        self.navigationItem.title = "Saved"
+        self.navigationItem.title = "TempSave"
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
             navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
-        } else {
-            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
         }
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
@@ -53,6 +59,24 @@ class SavingTableViewController: UITableViewController {
         self.tableView.backgroundView = imageView
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        
+        if SavingTableViewController.from.count == 0 {
+            
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 000000000000.1, execute: {
+                self.animateIn()
+            })
+
+        }
+        
+        if tableView.contentSize.height < tableView.frame.size.height {
+            tableView.isScrollEnabled = false
+        } else {
+            tableView.isScrollEnabled = true
+        }
+        
+        zeroView.layer.cornerRadius = 10.0
+        zeroView.clipsToBounds = true
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,6 +106,7 @@ class SavingTableViewController: UITableViewController {
         let toName = SavingTableViewController.to[indexPath.row]
         cell.toLabel?.text = toName
         
+        cell.selectionStyle = .none
         
         return cell
     }
@@ -99,8 +124,43 @@ class SavingTableViewController: UITableViewController {
             SavingTableViewController.to.remove(at: indexPath.row)
             defaults.set(SavingTableViewController.from, forKey: "fromValues")
             defaults.set(SavingTableViewController.to, forKey: "toValues")
+            UserDefaults(suiteName: "group.com.Aaron-Nguyen.Temperature")?.set(defaults.object(forKey: "fromValues"), forKey: "fromValues")
+            UserDefaults(suiteName: "group.com.Aaron-Nguyen.Temperature")?.set(defaults.object(forKey: "toValues"), forKey: "toValues")
             
             tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            if SavingTableViewController.from.count == 0 {
+                animateIn()
+            }
+        }
+    }
+    
+    let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.regular))
+    
+    func animateIn() {
+        if !UIAccessibilityIsReduceTransparencyEnabled() {
+            blurEffectView.frame = self.view.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            
+            self.view.addSubview(blurEffectView)
+            blurEffectView.alpha = 0
+
+        }
+        
+        self.view.addSubview(self.zeroView)
+        
+        zeroView.center = CGPoint(x: view.center.x , y: view.center.y - (navigationController?.navigationBar.frame.height)!)
+        
+        zeroView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
+        zeroView.alpha = 0
+        
+        UIView.animate(withDuration: 0.2) {
+     
+            self.blurEffectView.alpha = 1
+            self.blurEffectView.transform = CGAffineTransform.identity
+            
+            self.zeroView.alpha = 1
+            self.zeroView.transform = CGAffineTransform.identity
         }
     }
 

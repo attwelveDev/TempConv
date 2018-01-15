@@ -39,10 +39,9 @@ class AboutViewController: UIViewController, SFSafariViewControllerDelegate, Sid
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
             navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
-        } else {
-            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
         }
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
@@ -51,11 +50,27 @@ class AboutViewController: UIViewController, SFSafariViewControllerDelegate, Sid
         textView.layer.cornerRadius = 10.0
         textView.clipsToBounds = true
         
+        if textView.contentSize.height < textView.frame.size.height {
+            textView.isScrollEnabled = false
+        } else {
+            textView.isScrollEnabled = true
+        }
+        
         redirectLinkLooks.layer.cornerRadius = redirectLinkLooks.frame.height / 2
         redirectLinkLooks.clipsToBounds = true
         
-        sideBar = SideBar(sourceView: self.view, menuItems: ["From C°", "From F°", "From K", "Help", "Saved", "More"])
+        sideBar = SideBar(sourceView: self.view, menuItems: ["From C°", "From F°", "From K", "Help", "TempSave", "More"])
         sideBar.delegate = self
+        
+        leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(FirstViewController.handleSwipe))
+        leftSwipe.direction = .left
+        view.addGestureRecognizer(leftSwipe)
+        
+        leftSwipe.isEnabled = false
+        
+        rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(FirstViewController.handleSwipe))
+        rightSwipe.direction = .right
+        view.addGestureRecognizer(rightSwipe)
         
     }
 
@@ -64,6 +79,23 @@ class AboutViewController: UIViewController, SFSafariViewControllerDelegate, Sid
         // Dispose of any resources that can be recreated.
     }
     
+    var leftSwipe = UISwipeGestureRecognizer()
+    var rightSwipe = UISwipeGestureRecognizer()
+    
+    @objc func handleSwipe() {
+        directionEnabling()
+        sideBarBool = !sideBarBool
+    }
+    
+    func directionEnabling() {
+        if sideBarBool == false {
+            rightSwipe.isEnabled = false
+            leftSwipe.isEnabled = true
+        } else {
+            rightSwipe.isEnabled = true
+            leftSwipe.isEnabled = false
+        }
+    }
     
     var delegate: SideBarDelegate?
     
@@ -80,6 +112,7 @@ class AboutViewController: UIViewController, SFSafariViewControllerDelegate, Sid
     }
     
     @IBAction func openSideBar(_ sender: Any) {
+        directionEnabling()
         sideBarBool = !sideBarBool
     }
     

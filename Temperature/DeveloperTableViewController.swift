@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import StoreKit
 
-class DeveloperTableViewController: UITableViewController {
+class DeveloperTableViewController: UITableViewController, SKStoreProductViewControllerDelegate {
 
     @IBOutlet var tableContent: UITableView!
     let quickTap = [
@@ -58,7 +59,7 @@ class DeveloperTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         if section == 0 {
-            return "QuickTap is all about tapping quickly, hence the name. With two modes in Singleplayer, 'Time Mode' and 'Highscore Mode' and a competitive mode in Multiplayer. You'll always be engaged because of the huge range of choices."
+            return "QuickTap is all about tapping quickly, hence the name. QuickTap comprises of two modes in Singleplayer; Time Mode and Highscore Mode that sit along side Multiplayer's two modes; AcrossTable Mode and Territorial Mode. When you've become too tired, jump over to Tapedup World to check out other Tapedupers. You'll always be engaged because of the huge range of choices."
         }
         return ""
     }
@@ -72,19 +73,116 @@ class DeveloperTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (indexPath.section == 0 && indexPath.row == 0) {
+
+            activityIndicator("Loading")
             
-            if let url = URL(string: "https://itunes.apple.com/us/app/quicktap/id1190851546?mt=8") {
-                if #available(iOS 10.0, *) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            let storeVc = SKStoreProductViewController()
+            storeVc.delegate = self
+            
+            let parameters = [SKStoreProductParameterITunesItemIdentifier: NSNumber(value: 1190851546)]
+            
+            storeVc.loadProduct(withParameters: parameters, completionBlock: { (result, error) in
+                
+                self.effectView.removeFromSuperview()
+                
+                if result {
+                    self.present(storeVc, animated: true, completion: nil)
                 } else {
-                    // Fallback on earlier versions
+                    if let unwrappedError = error {
+                        self.animateIn()
+                        self.errorDescription.text = "\(unwrappedError.localizedDescription)"
+                    }
                 }
-            }
+            })
             
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     
+    func productViewControllerDidFinish(_ viewController: SKStoreProductViewController) {
+        viewController.dismiss(animated: true, completion: nil)
+    }
+    
+    var activityIndicator = UIActivityIndicatorView()
+    var strLabel = UILabel()
+    let effectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+    
+    func activityIndicator(_ title: String) {
+        
+        strLabel.removeFromSuperview()
+        activityIndicator.removeFromSuperview()
+        effectView.removeFromSuperview()
+        
+        strLabel = UILabel(frame: CGRect(x: 50, y: 0, width: 160, height: 45))
+        strLabel.text = title
+        strLabel.font = UIFont.systemFont(ofSize: 22, weight: .bold)
+        strLabel.textColor = UIColor.white
+        
+        effectView.frame = CGRect(x: view.frame.midX - strLabel.frame.width / 2, y: view.frame.midY - strLabel.frame.height / 2 , width: 160, height: 45)
+        effectView.center = CGPoint(x: view.center.x , y: view.center.y - (navigationController?.navigationBar.frame.height)!)
+        effectView.layer.cornerRadius = 10
+        effectView.layer.masksToBounds = true
+        
+        activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
+        activityIndicator.frame = CGRect(x: 0, y: 0, width: 45, height: 45)
+        activityIndicator.startAnimating()
+        
+        effectView.contentView.addSubview(activityIndicator)
+        effectView.contentView.addSubview(strLabel)
+        view.addSubview(effectView)
+    }
+
+    
+    let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.regular))
+    
+    func animateIn() {
+        if !UIAccessibilityIsReduceTransparencyEnabled() {
+            blurEffectView.frame = self.view.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            
+            self.view.addSubview(blurEffectView)
+            blurEffectView.alpha = 0
+        }
+        
+        self.view.addSubview(self.errorView)
+        
+        errorView.center = CGPoint(x: view.center.x , y: view.center.y - (navigationController?.navigationBar.frame.height)!)
+        
+        errorView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
+        errorView.alpha = 0
+        
+        UIView.animate(withDuration: 0.2) {
+            
+            self.navigationController?.navigationBar.alpha = 0.000001
+            
+            self.blurEffectView.alpha = 1
+            self.blurEffectView.transform = CGAffineTransform.identity
+            
+            self.errorView.alpha = 1
+            self.errorView.transform = CGAffineTransform.identity
+        }
+    }
+    
+    func animateOut() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.errorView.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
+            self.errorView.alpha = 0
+            self.blurEffectView.alpha = 0
+            
+            self.navigationController?.navigationBar.alpha = 1
+            
+        }){(success: Bool) in
+            self.errorView.removeFromSuperview()
+            self.blurEffectView.removeFromSuperview()
+        }
+    }
+    
+    @IBAction func okAction(_ sender: Any) {
+        animateOut()
+    }
+    
+    @IBOutlet var errorView: UIView!
+    @IBOutlet weak var errorDescription: UILabel!
     
     override func viewDidLoad() {
         
@@ -96,10 +194,9 @@ class DeveloperTableViewController: UITableViewController {
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
             navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
-        } else {
-            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 25), NSAttributedStringKey.foregroundColor: UIColor.white]
         }
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
@@ -111,6 +208,15 @@ class DeveloperTableViewController: UITableViewController {
         
         tableContent.delegate = self
         tableContent.dataSource = self
+        
+        if tableContent.contentSize.height < tableContent.frame.size.height {
+            tableContent.isScrollEnabled = false
+        } else {
+            tableContent.isScrollEnabled = true
+        }
+        
+        errorView.layer.cornerRadius = 10.0
+        errorView.clipsToBounds = true
         
     }
     
