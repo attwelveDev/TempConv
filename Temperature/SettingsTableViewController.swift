@@ -33,7 +33,7 @@ class SettingsTableViewController: UITableViewController {
         }
         self.cToFCell.textLabel?.textColor = UIColor.white
         self.cToFCell.backgroundColor = UIColor.white
-        self.cToFCell.accessoryType = UITableViewCellAccessoryType.none
+        self.cToFCell.accessoryType = UITableViewCell.AccessoryType.none
         
         let cToKCellValue = UserDefaults.standard
         if (cToKCellValue.value(forKey: "Value1") != nil){
@@ -46,7 +46,7 @@ class SettingsTableViewController: UITableViewController {
         }
         self.cToKCell.textLabel?.textColor = UIColor.white
         self.cToKCell.backgroundColor = UIColor(white: 1, alpha: 0.5)
-        self.cToKCell.accessoryType = UITableViewCellAccessoryType.none
+        self.cToKCell.accessoryType = UITableViewCell.AccessoryType.none
         
         let fToCCellValue = UserDefaults.standard
         if (fToCCellValue.value(forKey: "Value2") != nil){
@@ -59,7 +59,7 @@ class SettingsTableViewController: UITableViewController {
         }
         self.fToCCell.textLabel?.textColor = UIColor.white
         self.fToCCell.backgroundColor = UIColor(white: 1, alpha: 0.5)
-        self.fToCCell.accessoryType = UITableViewCellAccessoryType.none
+        self.fToCCell.accessoryType = UITableViewCell.AccessoryType.none
         
         let fToKCellValue = UserDefaults.standard
         if (fToKCellValue.value(forKey: "Value3") != nil){
@@ -72,7 +72,7 @@ class SettingsTableViewController: UITableViewController {
         }
         self.fToKCell.textLabel?.textColor = UIColor.white
         self.fToKCell.backgroundColor = UIColor(white: 1, alpha: 0.5)
-        self.fToKCell.accessoryType = UITableViewCellAccessoryType.none
+        self.fToKCell.accessoryType = UITableViewCell.AccessoryType.none
         
         let kToCCellValue = UserDefaults.standard
         if (kToCCellValue.value(forKey: "Value4") != nil){
@@ -85,7 +85,7 @@ class SettingsTableViewController: UITableViewController {
         }
         self.kToCCell.textLabel?.textColor = UIColor.white
         self.kToCCell.backgroundColor = UIColor(white: 1, alpha: 0.5)
-        self.kToCCell.accessoryType = UITableViewCellAccessoryType.none
+        self.kToCCell.accessoryType = UITableViewCell.AccessoryType.none
         
         let kToFCellValue = UserDefaults.standard
         if (kToFCellValue.value(forKey: "Value5") != nil){
@@ -98,7 +98,7 @@ class SettingsTableViewController: UITableViewController {
         }
         self.kToFCell.textLabel?.textColor = UIColor.white
         self.kToFCell.backgroundColor = UIColor(white: 1, alpha: 0.5)
-        self.kToFCell.accessoryType = UITableViewCellAccessoryType.none
+        self.kToFCell.accessoryType = UITableViewCell.AccessoryType.none
         
     }
     
@@ -267,10 +267,10 @@ class SettingsTableViewController: UITableViewController {
         self.navigationItem.title = "Settings"
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
-            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         }
         
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
@@ -278,7 +278,7 @@ class SettingsTableViewController: UITableViewController {
         let imageView = UIImageView(image: backgroundImage)
         self.tableView.backgroundView = imageView
         
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
         tableContent.delegate = self
         tableContent.dataSource = self

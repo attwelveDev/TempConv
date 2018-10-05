@@ -41,11 +41,11 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         animator = UIDynamicAnimator(referenceView: originView)
         
         let showGestureRecognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(SideBar.handleSwipe(_:)))
-        showGestureRecognizer.direction = UISwipeGestureRecognizerDirection.right
+        showGestureRecognizer.direction = UISwipeGestureRecognizer.Direction.right
         originView.addGestureRecognizer(showGestureRecognizer)
        
         let hideGestureRecognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(SideBar.handleSwipe(_:)))
-        hideGestureRecognizer.direction = UISwipeGestureRecognizerDirection.left
+        hideGestureRecognizer.direction = UISwipeGestureRecognizer.Direction.left
         originView.addGestureRecognizer(hideGestureRecognizer)
         
     }
@@ -58,16 +58,16 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         
         originView.addSubview(sideBarContainerView)
         
-        let blurView: UIVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.light))
+        let blurView: UIVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffect.Style.light))
         blurView.frame = sideBarContainerView.bounds
         sideBarContainerView.addSubview(blurView)
         
         sideBarTableViewController.delegate = self
         sideBarTableViewController.tableView.frame = sideBarContainerView.bounds
         sideBarTableViewController.tableView.clipsToBounds = false
-        sideBarTableViewController.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        sideBarTableViewController.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         sideBarTableViewController.tableView.backgroundColor = UIColor.clear
-        sideBarTableViewController.tableView.contentInset = UIEdgeInsetsMake(sideBarTableViewTopInset, 0, 0, 0)
+        sideBarTableViewController.tableView.contentInset = UIEdgeInsets.init(top: sideBarTableViewTopInset, left: 0, bottom: 0, right: 0)
         sideBarTableViewController.tableView.isScrollEnabled = false
         
         sideBarTableViewController.tableView.reloadData()
@@ -77,7 +77,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
     }
     
     @objc func handleSwipe(_ recgnizer: UISwipeGestureRecognizer) {
-        if recgnizer.direction == UISwipeGestureRecognizerDirection.left {
+        if recgnizer.direction == UISwipeGestureRecognizer.Direction.left {
             showSideBar(false)
             delegate?.sideBarWillClose?()
         } else {
@@ -104,7 +104,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         collisionBehavior.addBoundary(withIdentifier: "sideBarBoundary" as NSCopying, from: CGPoint(x: boundary, y: 20), to: CGPoint(x: boundary, y: originView.frame.size.height))
         animator.addBehavior(collisionBehavior)
         
-        let pushBehavior:UIPushBehavior = UIPushBehavior(items: [sideBarContainerView], mode: UIPushBehaviorMode.instantaneous)
+        let pushBehavior:UIPushBehavior = UIPushBehavior(items: [sideBarContainerView], mode: UIPushBehavior.Mode.instantaneous)
         pushBehavior.magnitude = magnitude
         animator.addBehavior(pushBehavior)
         

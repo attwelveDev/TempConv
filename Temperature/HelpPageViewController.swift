@@ -30,7 +30,7 @@ class HelpPageViewController: UIPageViewController, UIPageViewControllerDataSour
             
             HelpPageViewController.isFirstTimeThroughTutorial = true
             
-            let newBackButton = UIBarButtonItem(title: "Skip", style: UIBarButtonItemStyle.plain, target: self, action: #selector(skip(sender:)))
+            let newBackButton = UIBarButtonItem(title: "Skip", style: UIBarButtonItem.Style.plain, target: self, action: #selector(skip(sender:)))
             newBackButton.image = nil
             self.navigationItem.leftBarButtonItem = newBackButton
             newBackButton.tintColor = .white
@@ -76,10 +76,10 @@ class HelpPageViewController: UIPageViewController, UIPageViewControllerDataSour
         self.navigationItem.title = "Help"
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
-            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         }
         
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
         navigationController?.navigationBar.tintColor = .white
         

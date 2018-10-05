@@ -111,7 +111,7 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
             
             if let url = URL(string: "https://itunes.apple.com/us/app/tempconv/id1163432921?ls=1&mt=8") {
                 if #available(iOS 10.0, *) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
                 } else {
                     // Fallback on earlier versions
                 }
@@ -179,7 +179,7 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
     func configuredMailComposeViewController() -> MFMailComposeViewController {
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
-            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         }
         
         navigationController?.navigationBar.tintColor = UIColor.white
@@ -206,7 +206,7 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
     }
     
     func animateIn2() {
-        if !UIAccessibilityIsReduceTransparencyEnabled() {
+        if !UIAccessibility.isReduceTransparencyEnabled {
             blurEffectView.frame = self.view.bounds
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             
@@ -258,10 +258,10 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
         self.navigationItem.title = "More"
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
-            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         }
 
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
@@ -269,7 +269,7 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
         let imageView = UIImageView(image: backgroundImage)
         self.tableView.backgroundView = imageView
         
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
         tableContent.delegate = self
         tableContent.dataSource = self
@@ -309,10 +309,10 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
         // Dispose of any resources that can be recreated.
     }
     
-    let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.regular))
+    let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffect.Style.regular))
     
     func animateIn() {
-        if !UIAccessibilityIsReduceTransparencyEnabled() {
+        if !UIAccessibility.isReduceTransparencyEnabled {
             blurEffectView.frame = self.view.bounds
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             
@@ -362,4 +362,9 @@ class AboutTableViewController: UITableViewController, SFSafariViewControllerDel
      }
      */
     
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

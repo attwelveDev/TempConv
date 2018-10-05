@@ -123,7 +123,7 @@ class DeveloperTableViewController: UITableViewController, SKStoreProductViewCon
         effectView.layer.cornerRadius = 10
         effectView.layer.masksToBounds = true
         
-        activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
+        activityIndicator = UIActivityIndicatorView(style: .white)
         activityIndicator.frame = CGRect(x: 0, y: 0, width: 45, height: 45)
         activityIndicator.startAnimating()
         
@@ -133,10 +133,10 @@ class DeveloperTableViewController: UITableViewController, SKStoreProductViewCon
     }
 
     
-    let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.regular))
+    let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffect.Style.regular))
     
     func animateIn() {
-        if !UIAccessibilityIsReduceTransparencyEnabled() {
+        if !UIAccessibility.isReduceTransparencyEnabled {
             blurEffectView.frame = self.view.bounds
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             
@@ -193,10 +193,10 @@ class DeveloperTableViewController: UITableViewController, SKStoreProductViewCon
         self.navigationItem.title = "More Apps"
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
-            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         }
         
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
@@ -204,7 +204,7 @@ class DeveloperTableViewController: UITableViewController, SKStoreProductViewCon
         let imageView = UIImageView(image: backgroundImage)
         self.tableView.backgroundView = imageView
         
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
         tableContent.delegate = self
         tableContent.dataSource = self

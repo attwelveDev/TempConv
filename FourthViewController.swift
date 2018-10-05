@@ -35,10 +35,10 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, SideBarDeleg
         animateOut()
     }
     
-    let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.regular))
+    let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffect.Style.regular))
     
     func animateIn() {
-        if !UIAccessibilityIsReduceTransparencyEnabled() {
+        if !UIAccessibility.isReduceTransparencyEnabled {
             blurEffectView.frame = self.view.bounds
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             
@@ -80,7 +80,7 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, SideBarDeleg
     }
     
     func animateIn1() {
-        if !UIAccessibilityIsReduceTransparencyEnabled() {
+        if !UIAccessibility.isReduceTransparencyEnabled {
             blurEffectView.frame = self.view.bounds
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             
@@ -121,7 +121,7 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, SideBarDeleg
     }
     
     func animateIn2() {
-        if !UIAccessibilityIsReduceTransparencyEnabled() {
+        if !UIAccessibility.isReduceTransparencyEnabled {
             blurEffectView.frame = self.view.bounds
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             
@@ -183,10 +183,10 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, SideBarDeleg
         self.navigationItem.title = "F° to C°"
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
-            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         }
         
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
         tempLabel.layer.cornerRadius = tempLabel.frame.height / 2
         tempLabel.clipsToBounds = true
@@ -265,7 +265,7 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, SideBarDeleg
     @IBOutlet var longPress: UILongPressGestureRecognizer!
     @IBAction func longPressed(_ sender: Any) {
         let copyable = tempLabel.text!
-        okLabel.setTitleColor(UIColor(red: 30/255.0, green: 175/255.0, blue: 249/255.0, alpha: 1.0), for: UIControlState.normal)
+        okLabel.setTitleColor(UIColor(red: 30/255.0, green: 175/255.0, blue: 249/255.0, alpha: 1.0), for: UIControl.State.normal)
         okLabel.setTitle("OK",for: .normal)
         okLabel.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         okLabel.isUserInteractionEnabled = true
@@ -294,7 +294,7 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, SideBarDeleg
         copyLabel.text = "Copy \(copyable)?"
         copyLabel.isHidden = true
         cancelLabel.isHidden = true
-        okLabel.setTitleColor(UIColor.green, for: UIControlState.normal)
+        okLabel.setTitleColor(UIColor.green, for: UIControl.State.normal)
         okLabel.setTitle("Success", for: .normal)
         okLabel.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
         okLabel.isUserInteractionEnabled = false
@@ -321,7 +321,7 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, SideBarDeleg
     @IBAction func doubleTapped(_ sender: Any) {
         let to = tempLabel.text!
         let from = "\(tempPicker.selectedRow(inComponent: 0) + -150)°F"
-        okLabel1.setTitleColor(UIColor(red: 30/255.0, green: 175/255.0, blue: 249/255.0, alpha: 1.0), for: UIControlState.normal)
+        okLabel1.setTitleColor(UIColor(red: 30/255.0, green: 175/255.0, blue: 249/255.0, alpha: 1.0), for: UIControl.State.normal)
         okLabel1.setTitle("OK",for: .normal)
         okLabel1.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         okLabel1.isUserInteractionEnabled = true
@@ -356,7 +356,7 @@ class FourthViewController: UIViewController, UIPickerViewDelegate, SideBarDeleg
         UserDefaults(suiteName: "group.com.Aaron-Nguyen.Temperature")?.set(defaults.object(forKey: "toValues"), forKey: "toValues")
         saveLabel.isHidden = true
         cancelLabel1.isHidden = true
-        okLabel1.setTitleColor(UIColor.green, for: UIControlState.normal)
+        okLabel1.setTitleColor(UIColor.green, for: UIControl.State.normal)
         okLabel1.setTitle("Success", for: .normal)
         okLabel1.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
         okLabel1.isUserInteractionEnabled = false
